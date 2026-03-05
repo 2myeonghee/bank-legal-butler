@@ -313,8 +313,11 @@ tr:last-child td { border-bottom: none; }
   td, th { white-space: normal !important; word-break: keep-all; }
   th:first-child, td:first-child { white-space: nowrap !important; }
   .table-wrap { overflow: visible !important; }
-  .card-grid2, .card-grid3, .price-grid { grid-template-columns: 1fr 1fr !important; }
+  .card-grid2, .card-grid3, .price-grid,
+  .stat-card + .stat-card { grid-template-columns: 1fr !important; }
+  .card-grid2, .card-grid3, .price-grid { grid-template-columns: 1fr !important; }
   .engine-grid { grid-template-columns: 1fr 32px 1fr !important; }
+  .cover-sigline { grid-template-columns: 1fr 1fr 1fr !important; }
   .note, .card, .rm-item { page-break-inside: avoid; }
 }
 </style>
