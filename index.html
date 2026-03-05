@@ -4,483 +4,700 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>뱅크법률집사 — B2B 금융권 온라인 법률자문 플랫폼 기획서</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Pretendard',sans-serif;background:#F8FAFC;color:#0D1117;font-size:14px;line-height:1.7}
-.cover{background:#1B2A3A;min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:80px 60px;page-break-after:always}
-.cover-badge{display:inline-block;border:1px solid rgba(255,255,255,0.3);color:rgba(255,255,255,0.7);padding:5px 14px;border-radius:3px;font-size:11px;font-weight:600;letter-spacing:0.08em;margin-bottom:32px}
-.cover h1{font-size:42px;font-weight:800;color:#fff;letter-spacing:-0.03em;line-height:1.2;margin-bottom:16px}
-.cover h1 span{color:#60A5FA}
-.cover-sub{font-size:16px;color:rgba(255,255,255,0.5);margin-bottom:48px;line-height:1.8}
-.cover-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;border-top:1px solid rgba(255,255,255,0.1);padding-top:40px;max-width:640px}
-.cover-meta-item label{font-size:11px;color:rgba(255,255,255,0.35);letter-spacing:0.06em;font-weight:600;display:block;margin-bottom:4px}
-.cover-meta-item span{font-size:14px;color:#fff;font-weight:600}
-.section{padding:60px;page-break-inside:avoid;max-width:960px;margin:0 auto}
-.section+.section{border-top:1px solid #E2E8F0}
-.section-header{display:flex;align-items:flex-start;gap:20px;margin-bottom:40px}
-.section-num{font-size:11px;font-weight:800;color:#2563EB;letter-spacing:0.1em;background:#EFF6FF;padding:4px 10px;border-radius:3px;white-space:nowrap;margin-top:4px}
-.section-title{font-size:22px;font-weight:800;color:#0D1117;letter-spacing:-0.02em}
-.section-desc{font-size:13px;color:#64748B;margin-top:6px;line-height:1.7}
-h3{font-size:15px;font-weight:700;color:#0D1117;letter-spacing:-0.01em;margin:28px 0 14px}
-h4{font-size:13px;font-weight:700;color:#374151;margin:20px 0 10px}
-p{font-size:13px;color:#374151;line-height:1.8;margin-bottom:12px}
-.card{background:#fff;border:1px solid #E2E8F0;border-radius:8px;padding:24px;margin-bottom:16px}
-.card-title{font-size:13px;font-weight:700;color:#0D1117;margin-bottom:10px}
-table{width:100%;border-collapse:collapse;font-size:12.5px;margin:16px 0}
-thead th{background:#F1F5F9;color:#374151;font-weight:700;padding:10px 14px;text-align:left;border-bottom:2px solid #E2E8F0;white-space:nowrap}
-tbody td{padding:9px 14px;border-bottom:1px solid #F1F5F9;color:#374151;vertical-align:top}
-tbody tr:last-child td{border-bottom:none}
-.tag{display:inline-block;padding:2px 8px;border-radius:3px;font-size:11px;font-weight:700;margin-right:4px}
-.tag-l1{background:#DCFCE7;color:#15803D}
-.tag-l2{background:#DBEAFE;color:#1D4ED8}
-.tag-l3{background:#FEE2E2;color:#DC2626}
-.tag-high{background:#FEF9C3;color:#92400E}
-.tag-mid{background:#F0FDF4;color:#166534}
-.tag-low{background:#F8FAFC;color:#64748B;border:1px solid #E2E8F0}
-.highlight-box{background:#EFF6FF;border-left:3px solid #2563EB;padding:16px 20px;border-radius:0 6px 6px 0;margin:16px 0}
-.highlight-box p{color:#1E40AF;font-size:12.5px;margin:0}
-.warn-box{background:#FFFBEB;border-left:3px solid #F59E0B;padding:16px 20px;border-radius:0 6px 6px 0;margin:16px 0}
-.warn-box p{color:#92400E;font-size:12.5px;margin:0}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0}
-.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:16px 0}
-.stat-card{background:#fff;border:1px solid #E2E8F0;border-radius:8px;padding:20px 24px}
-.stat-card .num{font-size:28px;font-weight:800;color:#1B2A3A;letter-spacing:-0.03em}
-.stat-card .unit{font-size:13px;color:#64748B;margin-left:4px}
-.stat-card .label{font-size:11px;color:#94A3B8;margin-top:4px;font-weight:600;letter-spacing:0.02em}
-.flow{display:flex;align-items:center;gap:0;margin:20px 0;flex-wrap:wrap}
-.flow-step{background:#fff;border:1px solid #E2E8F0;border-radius:6px;padding:12px 18px;font-size:12px;font-weight:600;color:#374151;flex:1;text-align:center;min-width:100px}
-.flow-arrow{color:#94A3B8;font-size:18px;padding:0 6px;flex-shrink:0}
-.price-card{background:#fff;border:1px solid #E2E8F0;border-radius:8px;overflow:hidden;flex:1}
-.price-card-header{padding:20px 24px;background:#F8FAFC;border-bottom:1px solid #E2E8F0}
-.price-card-header.featured{background:#1B2A3A}
-.price-card-header.featured .price-tier{color:rgba(255,255,255,0.6)}
-.price-card-header.featured .price-amount{color:#fff}
-.price-tier{font-size:11px;font-weight:700;letter-spacing:0.06em;color:#64748B;margin-bottom:8px}
-.price-amount{font-size:26px;font-weight:800;color:#0D1117;letter-spacing:-0.02em}
-.price-amount span{font-size:13px;font-weight:500;color:#94A3B8}
-.price-card-body{padding:20px 24px}
-.price-item{display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:12.5px;color:#374151}
-.price-item::before{content:"·";color:#2563EB;font-weight:700;flex-shrink:0;margin-top:1px}
-.roadmap-phase{background:#fff;border:1px solid #E2E8F0;border-radius:8px;padding:22px 26px;margin-bottom:16px}
-.roadmap-phase-header{display:flex;align-items:center;gap:12px;margin-bottom:16px}
-.phase-badge{background:#1B2A3A;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:3px;letter-spacing:0.04em}
-.phase-title{font-size:15px;font-weight:700;color:#0D1117}
-.phase-period{font-size:12px;color:#64748B;margin-left:auto}
-ul.checklist{list-style:none;padding:0}
-ul.checklist li{padding:4px 0;font-size:12.5px;color:#374151;display:flex;gap:8px}
-ul.checklist li::before{content:"—";color:#94A3B8;flex-shrink:0}
-.divider{height:1px;background:#E2E8F0;margin:32px 0}
-.q-row{display:flex;gap:12px;padding:7px 0;border-bottom:1px solid #F8FAFC;align-items:flex-start}
-.q-row:last-child{border-bottom:none}
-.q-num{font-size:11px;font-weight:700;color:#94A3B8;min-width:24px;margin-top:2px}
-.q-text{font-size:12.5px;color:#374151;flex:1;line-height:1.6}
-.q-meta{font-size:11px;color:#94A3B8;white-space:nowrap;margin-top:2px}
-.engine-row{display:grid;grid-template-columns:1fr 40px 1fr;gap:0;align-items:start;margin:12px 0}
-.engine-col{background:#fff;border:1px solid #E2E8F0;border-radius:6px;padding:14px 16px}
-.engine-col.old{border-color:#E2E8F0;background:#F8FAFC}
-.engine-col.new{border-color:#BFDBFE;background:#EFF6FF}
-.engine-arrow{display:flex;align-items:center;justify-content:center;font-size:18px;color:#94A3B8;padding-top:12px}
-.engine-col-title{font-size:11px;font-weight:700;letter-spacing:0.06em;color:#94A3B8;margin-bottom:10px}
-.engine-item{font-size:12px;color:#374151;padding:3px 0;border-bottom:1px solid #F1F5F9;line-height:1.5}
-.engine-item:last-child{border-bottom:none}
-.risk-row{display:grid;grid-template-columns:28px 1fr 1fr;gap:12px;padding:10px 0;border-bottom:1px solid #F1F5F9;align-items:start;font-size:12.5px}
-.risk-row:last-child{border-bottom:none}
-.risk-num{font-weight:700;color:#2563EB}
-@media print{
-  body{background:#fff}
-  .cover{min-height:auto;padding:60px 50px}
-  .section{page-break-before:always;padding:40px 50px}
-  .cover{page-break-after:always}
+:root {
+  --primary: #1a2a3a;
+  --bg: #ffffff;
+  --surface: #f8f9fa;
+  --border: #dee2e6;
+  --text: #212529;
+  --muted: #6c757d;
+  --th-bg: #e9ecef;
+  --accent: #2563eb;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+  background: #fff;
+  color: var(--text);
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+/* ── 커버 ── */
+.cover {
+  background: var(--primary);
+  color: #fff;
+  padding: 80px 60px 72px;
+  position: relative;
+}
+.cover-conf {
+  position: absolute;
+  top: 32px; right: 48px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: rgba(255,255,255,0.35);
+  text-transform: uppercase;
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 4px 12px;
+}
+.cover-meta { display: flex; flex-direction: column; margin-bottom: 56px; }
+.cover-meta-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  font-size: 12px;
+  line-height: 2;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 2px 0;
+  color: rgba(255,255,255,0.45);
+}
+.cover-meta-row span { color: rgba(255,255,255,0.9); }
+.cover-label {
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 18px;
+}
+.cover h1 {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+.cover h2 {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.7;
+  margin-bottom: 48px;
+}
+.cover-sigline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.12);
+  max-width: 480px;
+}
+.cover-sigbox { background: var(--primary); padding: 14px 18px; font-size: 12px; }
+.cover-sigbox .sig-label { color: rgba(255,255,255,0.35); margin-bottom: 24px; font-size: 11px; }
+.cover-sigbox .sig-name { color: rgba(255,255,255,0.85); font-weight: 600; }
+
+/* ── 목차 ── */
+.toc-page {
+  padding: 56px 60px 48px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+.toc-title {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+.toc-list { list-style: none; }
+.toc-list li {
+  display: flex;
+  align-items: baseline;
+  padding: 7px 0;
+  border-bottom: 1px dotted #ddd;
+  font-size: 13.5px;
+}
+.toc-list li:last-child { border-bottom: none; }
+.toc-num { min-width: 36px; color: var(--muted); font-size: 12px; }
+.toc-text { flex: 1; }
+
+/* ── 본문 ── */
+.body-wrap { max-width: 900px; margin: 0 auto; padding: 56px 48px 100px; }
+section { margin-bottom: 64px; }
+
+/* 섹션 헤더 */
+.sec-head { display: flex; align-items: center; gap: 0; margin-bottom: 28px; }
+.sec-num-block {
+  background: var(--primary);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 4px 12px;
+  margin-right: 14px;
+  flex-shrink: 0;
+}
+.sec-head h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+  flex: 1;
+  padding-bottom: 8px;
+}
+h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 32px 0 14px;
+  padding-left: 10px;
+  border-left: 3px solid var(--primary);
+}
+h4 { font-size: 13.5px; font-weight: 700; color: var(--text); margin: 20px 0 10px; }
+p { margin-bottom: 12px; color: var(--text); font-size: 13.5px; }
+ul, ol { padding-left: 22px; margin-bottom: 14px; }
+li { margin-bottom: 5px; font-size: 13.5px; line-height: 1.7; }
+
+/* ── 테이블 ── */
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 16px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 560px; }
+th {
+  background: var(--th-bg);
+  color: var(--text);
+  font-weight: 700;
+  padding: 9px 14px;
+  text-align: left;
+  font-size: 12.5px;
+  white-space: nowrap;
+}
+td {
+  background: #fff;
+  padding: 9px 14px;
+  vertical-align: top;
+  border-bottom: 1px solid #f0f0f0;
+  line-height: 1.65;
+}
+td:first-child { white-space: nowrap; }
+tr:last-child td { border-bottom: none; }
+.td-wrap td:first-child { white-space: normal; } /* 첫 컬럼 long text */
+
+/* ── 노트 박스 ── */
+.note {
+  background: var(--surface);
+  border-left: 3px solid var(--primary);
+  padding: 14px 18px;
+  margin: 20px 0;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.note.caution { border-left-color: #b7791f; background: #fffbf0; }
+.note.notice  { border-left-color: #2b6cb0; background: #ebf4ff; }
+.note-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+/* ── 등급 태그 ── */
+.tag {
+  display: inline-block;
+  padding: 1px 7px;
+  border-radius: 2px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+.tag-l1 { background: #d1fae5; color: #065f46; }
+.tag-l2 { background: #dbeafe; color: #1e40af; }
+.tag-l3 { background: #fee2e2; color: #991b1b; }
+
+/* ── 그리드 카드 ── */
+.card-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 16px 0; }
+.card-grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin: 16px 0; }
+.card {
+  border: 1px solid var(--border);
+  padding: 20px 22px;
+  background: #fff;
+}
+.card-title { font-size: 13px; font-weight: 700; color: var(--primary); margin-bottom: 10px; }
+
+/* ── 통계 카드 ── */
+.stat-card { border: 1px solid var(--border); padding: 18px 20px; background: #fff; }
+.stat-card .num { font-size: 26px; font-weight: 800; color: var(--primary); letter-spacing: -0.03em; }
+.stat-card .unit { font-size: 12px; color: var(--muted); margin-left: 3px; }
+.stat-card .label { font-size: 11px; color: var(--muted); margin-top: 4px; line-height: 1.4; }
+
+/* ── 서비스 흐름 ── */
+.flow { display: flex; align-items: center; gap: 0; margin: 16px 0; flex-wrap: wrap; }
+.flow-step {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 10px 16px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--primary);
+  text-align: center;
+  flex: 1;
+  min-width: 90px;
+}
+.flow-step small { display: block; font-weight: 400; color: var(--muted); font-size: 11px; margin-top: 2px; }
+.flow-arrow { color: var(--muted); padding: 0 4px; font-size: 16px; flex-shrink: 0; }
+
+/* ── 엔진 비교 ── */
+.engine-grid { display: grid; grid-template-columns: 1fr 32px 1fr; gap: 0; margin: 14px 0; align-items: start; }
+.engine-col { border: 1px solid var(--border); padding: 14px 16px; }
+.engine-col.old { background: var(--surface); }
+.engine-col.new { background: #ebf4ff; border-color: #bfdbfe; }
+.engine-col-title { font-size: 10.5px; font-weight: 700; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 10px; text-transform: uppercase; }
+.engine-item { font-size: 12.5px; color: var(--text); padding: 4px 0; border-bottom: 1px solid #f0f0f0; }
+.engine-item:last-child { border-bottom: none; }
+.engine-arrow { display: flex; align-items: flex-start; justify-content: center; padding-top: 36px; color: var(--muted); font-size: 18px; }
+
+/* ── 가격 카드 ── */
+.price-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin: 16px 0; }
+.price-card { border: 1px solid var(--border); overflow: hidden; }
+.price-header { padding: 18px 20px; background: var(--surface); border-bottom: 1px solid var(--border); }
+.price-header.featured { background: var(--primary); }
+.price-header.featured .p-tier { color: rgba(255,255,255,0.45); }
+.price-header.featured .p-amount { color: #fff; }
+.p-tier { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 6px; text-transform: uppercase; }
+.p-amount { font-size: 24px; font-weight: 800; color: var(--primary); letter-spacing: -0.02em; }
+.p-amount span { font-size: 13px; font-weight: 400; color: var(--muted); margin-left: 2px; }
+.price-body { padding: 18px 20px; }
+.price-item { font-size: 12.5px; padding: 4px 0; color: var(--text); display: flex; gap: 6px; }
+.price-item::before { content: "·"; color: var(--primary); font-weight: 700; flex-shrink: 0; }
+
+/* ── 로드맵 ── */
+.roadmap { border-left: 2px solid var(--border); padding-left: 28px; margin-left: 8px; }
+.rm-item { position: relative; margin-bottom: 32px; }
+.rm-item::before {
+  content: '';
+  position: absolute;
+  left: -35px; top: 5px;
+  width: 14px; height: 14px;
+  background: var(--primary);
+  border: 3px solid #fff;
+  outline: 1.5px solid var(--primary);
+  border-radius: 50%;
+}
+.rm-phase {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.rm-item h4 { margin: 0 0 10px; font-size: 13.5px; }
+
+/* ── 모바일 ── */
+@media (max-width: 768px) {
+  .cover { padding: 48px 24px 48px; }
+  .toc-page { padding: 40px 24px; }
+  .body-wrap { padding: 32px 20px 64px; }
+  .card-grid2, .card-grid3, .price-grid { grid-template-columns: 1fr; }
+  .engine-grid { grid-template-columns: 1fr; }
+  .engine-arrow { padding: 8px 0; }
+  .flow { flex-direction: column; }
+  .flow-step { width: 100%; }
+  .cover-sigline { grid-template-columns: 1fr; }
+}
+
+/* ── 인쇄 ── */
+@page { size: A4; margin: 18mm 17mm 18mm 17mm; }
+@media print {
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  body { font-size: 12.5px; }
+  .body-wrap { padding: 0; max-width: 100%; }
+  .cover { page-break-after: always; }
+  .toc-page { page-break-before: always; page-break-after: always; }
+  section { page-break-before: always; }
+  .sec-head, h3, h4 { page-break-after: avoid; }
+  table { display: table !important; width: 100% !important; overflow: visible !important; font-size: 11.5px; }
+  thead { display: table-header-group; }
+  tr { page-break-inside: avoid; }
+  td, th { white-space: normal !important; word-break: keep-all; }
+  th:first-child, td:first-child { white-space: nowrap !important; }
+  .table-wrap { overflow: visible !important; }
+  .card-grid2, .card-grid3, .price-grid { grid-template-columns: 1fr 1fr !important; }
+  .engine-grid { grid-template-columns: 1fr 32px 1fr !important; }
+  .note, .card, .rm-item { page-break-inside: avoid; }
 }
 </style>
 </head>
 <body>
 
-<!-- ══ COVER ══ -->
+<!-- ══ 커버 ══ -->
 <div class="cover">
-  <div class="cover-badge">CONFIDENTIAL — 내부 기획서 v1.0</div>
-  <h1>뱅크<span>법률집사</span><br>B2B 금융권<br>온라인 법률자문 플랫폼</h1>
-  <p class="cover-sub">
-    아파트집사 플랫폼을 금융권 B2B 정기 법률자문으로 확장<br>
-    저축은행 · 새마을금고 · 캐피탈 · 대부업 대상 구독형 AI+변호사 하이브리드 자문
-  </p>
+  <div class="cover-conf">Confidential</div>
   <div class="cover-meta">
-    <div class="cover-meta-item">
-      <label>작성</label>
-      <span>법무법인 더 에이치 황해</span>
+    <div class="cover-meta-row">작성 주체<span>법무법인 더 에이치 황해</span></div>
+    <div class="cover-meta-row">작성 기준일<span>2026년 3월</span></div>
+    <div class="cover-meta-row">문서 버전<span>v1.0 초안</span></div>
+    <div class="cover-meta-row">배포 범위<span>내부 경영진 한정</span></div>
+  </div>
+  <div class="cover-label">Business Plan</div>
+  <h1>뱅크법률집사<br>B2B 금융권 온라인 법률자문 플랫폼</h1>
+  <h2>아파트집사 플랫폼을 금융권 B2B 정기 법률자문으로 확장<br>저축은행 · 새마을금고 · 캐피탈 대상 구독형 AI+변호사 하이브리드 자문</h2>
+  <div class="cover-sigline">
+    <div class="cover-sigbox">
+      <div class="sig-label">대표 변호사</div>
+      <div class="sig-name">천상현</div>
     </div>
-    <div class="cover-meta-item">
-      <label>기준일</label>
-      <span>2026년 3월</span>
+    <div class="cover-sigbox">
+      <div class="sig-label">소재지</div>
+      <div class="sig-name">인천 미추홀구 학익로 60</div>
     </div>
-    <div class="cover-meta-item">
-      <label>버전</label>
-      <span>v1.0 초안</span>
+    <div class="cover-sigbox">
+      <div class="sig-label">연락처</div>
+      <div class="sig-name">032-251-1000</div>
     </div>
   </div>
 </div>
 
+<!-- ══ 목차 ══ -->
+<div class="toc-page">
+  <div class="toc-title">Contents</div>
+  <ul class="toc-list">
+    <li><span class="toc-num">01</span><span class="toc-text"><strong>기획 목적 및 추진 배경</strong> — 아파트집사 플랫폼과의 연계, 공급·수요 근거, 전략 목표</span></li>
+    <li><span class="toc-num">02</span><span class="toc-text"><strong>시장 분석 및 타깃 고객</strong> — 시장 규모, 현행 법률자문 한계, 1·2·3차 타깃 정의</span></li>
+    <li><span class="toc-num">03</span><span class="toc-text"><strong>금융권 주요 법률 질문 유형 분석</strong> — 4대 영역 41개 실무 질의, 빈도·난이도·반복성 분류</span></li>
+    <li><span class="toc-num">04</span><span class="toc-text"><strong>질문 등급 분류 및 변호사 공수 최적화</strong> — L1·L2·L3 정의, 처리 흐름, 공수 감소 로드맵</span></li>
+    <li><span class="toc-num">05</span><span class="toc-text"><strong>아파트집사 → 뱅크법률집사 엔진 전환</strong> — RAG 교체, 입력 폼, 라우팅, 개발 소요</span></li>
+    <li><span class="toc-num">06</span><span class="toc-text"><strong>가격 체계 및 수익 모델</strong> — 구독 티어, 건수 정의, 크레딧 전환, 수익 시뮬레이션</span></li>
+    <li><span class="toc-num">07</span><span class="toc-text"><strong>리스크 관리 및 실행 로드맵</strong> — 5대 리스크, Phase별 계획, KPI</span></li>
+  </ul>
+</div>
+
+<div class="body-wrap">
+
 <!-- ══ 01 기획 목적 ══ -->
-<div class="section">
-  <div class="section-header">
-    <div class="section-num">01</div>
-    <div>
-      <div class="section-title">기획 목적 및 추진 배경</div>
-      <div class="section-desc">아파트집사 플랫폼의 B2B 금융권 확장 근거 및 전략적 목표</div>
-    </div>
+<section>
+  <div class="sec-head">
+    <div class="sec-num-block">01</div>
+    <h2>기획 목적 및 추진 배경</h2>
   </div>
 
-  <h3>가. 아파트집사 플랫폼의 현재 구조</h3>
-  <p>아파트집사는 공동주택 입주예정자협의회(입예협)를 대상으로 <strong>질의 등록 → 인덱스 매칭 → 변호사 검토 → 답변 게시 → 레퍼런스 축적</strong>의 흐름으로 운영되는 AI+변호사 하이브리드 법률 자문 플랫폼이다. 집단등기, 하자, 건축 법률 등 공동주택 도메인에 특화된 RAG 인덱스와 반복 질문 자동 처리 구조가 핵심 자산이다.</p>
+  <h3>1.1 아파트집사 플랫폼의 현재 구조</h3>
+  <p>아파트집사는 공동주택 입주예정자협의회(입예협)를 대상으로 <strong>질의 등록 → 인덱스 매칭 → 변호사 검토 → 답변 게시 → 레퍼런스 축적</strong>의 흐름으로 운영되는 AI+변호사 하이브리드 법률자문 플랫폼이다. 집단등기·하자·건축 법률 등 공동주택 도메인에 특화된 RAG 인덱스와 반복 질문 자동 처리 구조가 핵심 자산이다.</p>
 
-  <div class="highlight-box"><p><strong>핵심 발견:</strong> 플랫폼의 기술 구조(질의 구조화 → 인덱스 라우팅 → 변호사 할당 → SLA 관리 → 레퍼런스 축적)는 도메인에 무관하게 이식 가능하다. 현재 등기팀이 저축은행 등에 제공하는 수작업 자문을 이 구조로 대체하면 공수는 줄이면서 단가는 유지할 수 있다.</p></div>
+  <div class="note notice">
+    <div class="note-label">핵심 발견</div>
+    플랫폼의 기술 구조(질의 구조화 → 인덱스 라우팅 → 변호사 할당 → SLA 관리 → 레퍼런스 축적)는 도메인에 무관하게 이식 가능하다. 현재 등기팀이 저축은행 등에 제공하는 수작업 자문을 이 구조로 대체하면 변호사 공수는 줄이면서 단가는 유지할 수 있다.
+  </div>
 
-  <h3>나. B2B 금융권으로 확장하는 이유</h3>
-  <div class="grid2">
+  <h3>1.2 B2B 금융권으로 확장하는 이유</h3>
+  <div class="card-grid2">
     <div class="card">
-      <div class="card-title">공급 측 근거 (로펌 입장)</div>
-      <ul class="checklist">
-        <li>현재 등기팀 → 저축은행 자문이 수작업·구두 형태 → 레퍼런스 미축적, 담당자 교체 시 노하우 소멸</li>
-        <li>변호사 1인이 반복 질문에 매번 새로 조사 → 시간당 원가 대비 수익성 낮음</li>
+      <div class="card-title">공급 측 근거 — 로펌 입장</div>
+      <ul>
+        <li>현재 등기팀 → 저축은행 자문이 수작업·구두 형태로 레퍼런스 미축적, 담당자 교체 시 노하우 소멸</li>
+        <li>변호사 1인이 반복 질문에 매번 신규 리서치 → 시간당 원가 대비 수익성 낮음</li>
         <li>정액 구독 수익이 없어 매출 변동성 높음 → 월정액 구조로 안정 수익 확보 가능</li>
         <li>아파트집사 인프라 개발비 이미 투입 → 추가 개발 최소화로 ROI 극대화</li>
       </ul>
     </div>
     <div class="card">
-      <div class="card-title">수요 측 근거 (금융기관 입장)</div>
-      <ul class="checklist">
-        <li>새마을금고 1,200개+, 저축은행 79개사 — 대부분 전담 법무팀 없음</li>
+      <div class="card-title">수요 측 근거 — 금융기관 입장</div>
+      <ul>
+        <li>새마을금고 3,242개, 저축은행 79개사 — 대부분 전담 법무팀 없음</li>
         <li>법률 이슈 발생 시 단건 의뢰 → 비용 예측 불가, 대응 지연</li>
-        <li>반복적 질문(등기, 연체, 담보 처리)에 매번 착수금 지불 → 비효율</li>
-        <li>2025년 이후 금융소비자보호법 강화 → 상시 법률 대응 필요성 급증</li>
-        <li>지점 담당자 수준에서 처리 가능한 법률 판단 기준이 없어 본점 에스컬레이션 과다</li>
+        <li>반복 질문(등기·연체·담보 처리)에 매번 착수금 지불 → 비효율</li>
+        <li>2021년 금소법 시행 이후 상시 법률 대응 필요성 급증</li>
+        <li>지점 담당자 수준에서 처리 가능한 법률 판단 기준 부재 → 본점 에스컬레이션 과다</li>
       </ul>
     </div>
   </div>
 
-  <h3>다. 전략 목표</h3>
-  <table>
-    <thead><tr><th>목표</th><th>지표</th><th>시점</th></tr></thead>
-    <tbody>
-      <tr><td>파일럿 고객 확보</td><td>저축은행/새마을금고 3~5개사 계약</td><td>6개월 내</td></tr>
-      <tr><td>월 구독 매출</td><td>월 300만원 이상 정기 구독 수익</td><td>12개월 내</td></tr>
-      <tr><td>L1 자동화율</td><td>전체 질의의 40% 이상 변호사 불필요 처리</td><td>12개월 내</td></tr>
-      <tr><td>레퍼런스 인덱스</td><td>금융권 Q&A 500건 이상 축적</td><td>18개월 내</td></tr>
-      <tr><td>타깃 확장</td><td>2차(상가연합회·프랜차이즈) 계약 시작</td><td>18개월 내</td></tr>
-    </tbody>
-  </table>
-</div>
-
-<!-- ══ 02 시장 분석 ══ -->
-<div class="section">
-  <div class="section-header">
-    <div class="section-num">02</div>
-    <div>
-      <div class="section-title">시장 분석 및 타깃 고객</div>
-      <div class="section-desc">금융권 법률자문 시장 규모, 경쟁 현황, 1·2·3차 타깃 정의</div>
-    </div>
-  </div>
-
-  <h3>가. 시장 규모 추정</h3>
-  <div class="grid3">
-    <div class="stat-card">
-      <div class="num">3,242<span class="unit">개</span></div>
-      <div class="label">새마을금고 (본점+지점, 2022 기준)</div>
-    </div>
-    <div class="stat-card">
-      <div class="num">79<span class="unit">개사</span></div>
-      <div class="label">저축은행 (저축은행중앙회 기준)</div>
-    </div>
-    <div class="stat-card">
-      <div class="num">50<span class="unit">개+</span></div>
-      <div class="label">캐피탈사 (여신전문금융업 등록)</div>
-    </div>
-    <div class="stat-card">
-      <div class="num">8,000<span class="unit">개+</span></div>
-      <div class="label">대부업 등록 업체 (금감원)</div>
-    </div>
-    <div class="stat-card">
-      <div class="num">약 400억<span class="unit">원/년</span></div>
-      <div class="label">2금융권 외부 법률자문 추정 시장</div>
-    </div>
-    <div class="stat-card">
-      <div class="num">월 50~150<span class="unit">만원</span></div>
-      <div class="label">현재 단건 자문 시 평균 지출</div>
-    </div>
-  </div>
-
-  <h3>나. 기존 법률자문 방식의 한계</h3>
-  <table>
-    <thead><tr><th>문제</th><th>현황</th><th>뱅크법률집사 해결</th></tr></thead>
-    <tbody>
-      <tr><td>단건 비용 예측 불가</td><td>질문 1건에 30~200만원 편차</td><td>월정액 구독으로 비용 예측 가능</td></tr>
-      <tr><td>담당자 교체 시 레퍼런스 소멸</td><td>변호사·담당자 바뀌면 처음부터</td><td>플랫폼에 전체 이력 축적</td></tr>
-      <tr><td>대응 지연</td><td>단건 의뢰 → 수임 → 검토 1~2주</td><td>L1 즉시 / L2 24~48시간 SLA</td></tr>
-      <tr><td>반복 질문 중복 지출</td><td>동일 내용 매번 착수금</td><td>인덱스에서 즉답, 추가 비용 없음</td></tr>
-      <tr><td>질문 구조화 부재</td><td>구두·메신저로 맥락 없이 질의</td><td>계좌번호·담보물·목적 입력 강제</td></tr>
-      <tr><td>규제 대응 리스크</td><td>금소법 위반 인지 지연</td><td>규제 변경 시 자동 알림+가이드</td></tr>
-    </tbody>
-  </table>
-
-  <h3>다. 타깃 고객 3단계</h3>
-  <div class="card">
-    <div class="card-title">1차 타깃 — 2금융권 여신 중심 기관 (즉시 착수)</div>
+  <h3>1.3 전략 목표</h3>
+  <div class="table-wrap">
     <table>
-      <thead><tr><th>분류</th><th>대상</th><th>주요 법률 니즈</th><th>진입 방식</th></tr></thead>
+      <thead><tr><th>목표</th><th>측정 지표</th><th>달성 시점</th></tr></thead>
       <tbody>
-        <tr><td><strong>저축은행</strong></td><td>웰컴, SBI, 한국투자, OK, 페퍼 등 79개사</td><td>등기/담보, 경매신청, 채권관리</td><td>등기팀 기존 거래처 레퍼런스</td></tr>
-        <tr><td><strong>새마을금고</strong></td><td>전국 3,242개 단위금고 (2022년 기준)</td><td>여신계약, 연체관리, 조합원 민원</td><td>지역 거점 → 중앙회 확장</td></tr>
-        <tr><td><strong>캐피탈</strong></td><td>소형·중형 캐피탈사 50개+</td><td>할부금융, 리스계약, 채권회수</td><td>기존 금융권 네트워크 소개</td></tr>
+        <tr><td>파일럿 고객 확보</td><td>저축은행·새마을금고 3~5개사 계약</td><td>6개월 내</td></tr>
+        <tr><td>월 구독 매출</td><td>월 300만원 이상 정기 구독 수익</td><td>12개월 내</td></tr>
+        <tr><td>L1 자동화율</td><td>전체 질의의 40% 이상 변호사 불필요 처리</td><td>12개월 내</td></tr>
+        <tr><td>레퍼런스 인덱스</td><td>금융권 Q&A 500건 이상 축적</td><td>18개월 내</td></tr>
+        <tr><td>2차 타깃 확장</td><td>상가연합회·프랜차이즈 계약 시작</td><td>18개월 내</td></tr>
       </tbody>
     </table>
   </div>
-  <div class="card">
-    <div class="card-title">2차 타깃 — 점포 밀집 상권 집단 (6개월 이후)</div>
-    <p>상가연합회, 상가관리단, 프랜차이즈 가맹점협의체 — 임대차, 계약, 가맹분쟁 반복 질의가 많고 대표 기구 존재. 아파트집사와 구조적으로 유사.</p>
-  </div>
-  <div class="card">
-    <div class="card-title">3차 타깃 — 중소기업 (12개월 이후, 운영 검증 후)</div>
-    <p>인천 남동공단 등 중소기업 — 계약, 노무, 규제 질의 다양. 1·2차 레퍼런스 충분히 축적된 뒤 진입. 질의 다양성과 원가 회수 리스크를 고려해 단계 진입.</p>
-  </div>
-</div>
+</section>
 
-<!-- ══ 03 금융권 주요 법률 질문 유형 ══ -->
-<div class="section">
-  <div class="section-header">
-    <div class="section-num">03</div>
-    <div>
-      <div class="section-title">금융권 주요 법률 질문 유형 분석</div>
-      <div class="section-desc">저축은행·새마을금고·캐피탈 실무 현장의 실제 질의 패턴 — 빈도·난이도·반복성 기준 분류</div>
-    </div>
+<!-- ══ 02 시장 분석 ══ -->
+<section>
+  <div class="sec-head">
+    <div class="sec-num-block">02</div>
+    <h2>시장 분석 및 타깃 고객</h2>
   </div>
 
-  <p>분류 기준: <strong>빈도</strong>(월 발생 횟수) · <strong>반복성</strong>(유사 질문 재발 가능성) · <strong>난이도</strong>(변호사 개입 필요 여부). 빈도가 높고 반복성이 강한 질문일수록 인덱스화·자동화 우선 대상이다.</p>
-  <p>아래 질문들은 황해 법무법인 등기팀이 저축은행·새마을금고를 대상으로 실제 수행한 자문 경험과 금융권 실무 레퍼런스를 바탕으로 도출했다.</p>
+  <h3>2.1 시장 규모 추정</h3>
+  <div class="card-grid3">
+    <div class="stat-card"><div class="num">3,242<span class="unit">개</span></div><div class="label">새마을금고<br>(본점+지점, 2022 기준)</div></div>
+    <div class="stat-card"><div class="num">79<span class="unit">개사</span></div><div class="label">저축은행<br>(저축은행중앙회 기준)</div></div>
+    <div class="stat-card"><div class="num">50<span class="unit">개+</span></div><div class="label">캐피탈사<br>(여신전문금융업 등록)</div></div>
+    <div class="stat-card"><div class="num">8,000<span class="unit">개+</span></div><div class="label">대부업 등록 업체<br>(금감원)</div></div>
+    <div class="stat-card"><div class="num">약 400억<span class="unit">원</span></div><div class="label">2금융권 외부 법률자문<br>추정 연간 시장</div></div>
+    <div class="stat-card"><div class="num">50~150<span class="unit">만원</span></div><div class="label">현행 단건 자문 시<br>건당 평균 지출</div></div>
+  </div>
 
-  <!-- 대분류 A -->
-  <h3>A. 여신 실행·계약 해석 — 빈도 최상, 반복성 최상</h3>
-  <p>대출 계약 체결 전후 발생하는 질의. 표준 약관 해석은 인덱스화 가능하나, 개별 계약 조항 분쟁·차주 특수 상황은 변호사 개입 필수.</p>
-  <table>
-    <thead><tr><th>#</th><th>실제 질의 내용</th><th>빈도</th><th>난이도</th><th>반복성</th><th>등급</th></tr></thead>
-    <tbody>
-      <tr><td>A-01</td><td>기한이익 상실 사유 발생 후 채무자에게 즉시 통보하지 않으면 이의 제기할 수 있나? 여신거래기본약관 기준 통보 의무 확인</td><td>매우 높음</td><td>낮음</td><td>높음</td><td><span class="tag tag-l1">L1</span></td></tr>
-      <tr><td>A-02</td><td>법인 대출 시 대표이사 연대보증 요구 가능 여부 — 상법 542조의9(상장사 임원 보증 금지)·금소법 적용 범위 판단</td><td>높음</td><td>중간</td><td>높음</td><td><span class="tag tag-l2">L2</span></td></tr>
-      <tr><td>A-03</td><td>포괄근담보(근저당+포괄근보증 연계) 설정 — 2020년 이후 개인 포괄근보증 금지 규정이 담보물 설정에도 영향을 미치나?</td><td>높음</td><td>중간</td><td>높음</td><td><span class="tag tag-l2">L2</span></td></tr>
-      <tr><td>A-04</td><td>사업자 명의 대출인데 실질이 가계자금인 경우 — DSR 규제 회피로 간주될 리스크 및 취급 가이드</td><td>중간</td><td>높음</td><td>중간</td><td><span class="tag tag-l2">L2</span></td></tr>
-      <tr><td>A-05</td><td>차주 신용등급 하락 시 추가 담보 청구 요건 — 여신거래기본약관 제5조 해석, 차주가 거부하면 기한이익 상실 발동 가능한가?</td><td>높음</td><td>중간</td><td>높음</td><td><span class="tag tag-l2">L2</span></td></tr>
-      <tr><td>A-06</td><td>만기 연장 심사 중 연체 발생 — 갱신 거절 통보 서면 요건 및 차주 이의신청 대응</td><td>중간</td><td>중간</td><td>높음</td><td><span class="tag tag-l2">L2</span></td></tr>
-      <tr><td>A-07</td><td>차주 사망 후 상속인이 3개월 내 상속 포기한 경우 — 금융기관 채권은 어떻게 처리하나? 상속재산관리인 선임 필요 여부</td><td>중간</td><td>높음</td><td>중간</td><td><span class="tag tag-l2">L2</span></td></tr>
-      <tr><td>A-08</td><td>근저당권 설정 시 채권최고액을 대출 원금의 120%로 잡는 근거 — 이자·비용 포함 산정 기준표</td><td>매우 높음</td><td>낮음</td><td>매우 높음</td><td><span class="tag tag-l1">L1</span></td></tr>
-      <tr><td>A-09</td><td>변동금리 대출에서 기준금리 상승 시 차주에게 사전 통지 의무 범위 — 금소법 정보 제공 의무와의 관계</td><td>높음</td><td>중간</td><td>높음</td><td><span class="tag tag-l2">L2</span></td></tr>
-      <tr><td>A-10</td><td>이사회 결의 없이 집행된 새마을금고 여신 — 내부 규정 위반이 대외 여신 효력에 영향을 미치나? 이사 개인 책임 범위</td><td>낮음</td><td>매우 높음</td><td>낮음</td><td><span class="tag tag-l3">L3</span></td></tr>
-    </tbody>
-  </table>
+  <h3>2.2 현행 법률자문 방식의 한계</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>문제</th><th>현황</th><th>뱅크법률집사 해결</th></tr></thead>
+      <tbody>
+        <tr><td>단건 비용 예측 불가</td><td>질문 1건에 30~200만원 편차</td><td>월정액 구독으로 비용 예측 가능</td></tr>
+        <tr><td>담당자 교체 시 레퍼런스 소멸</td><td>변호사·담당자 교체 시 처음부터 재설명</td><td>플랫폼에 전체 이력 영구 축적</td></tr>
+        <tr><td>대응 지연</td><td>단건 의뢰 → 수임 → 검토 1~2주</td><td>L1 즉시 / L2 24~48시간 SLA</td></tr>
+        <tr><td>반복 질문 중복 지출</td><td>동일 내용도 매번 착수금 발생</td><td>인덱스에서 즉답, 추가 비용 없음</td></tr>
+        <tr><td>질문 구조화 부재</td><td>구두·메신저로 맥락 없이 질의</td><td>계좌번호·담보물·목적 입력 강제</td></tr>
+        <tr><td>규제 대응 리스크</td><td>금소법 위반 인지 지연</td><td>규제 변경 시 자동 알림+가이드</td></tr>
+      </tbody>
+    </table>
+  </div>
 
-  <!-- 대분류 B -->
-  <h3>B. 담보 권리 실행·경매·명도 — 빈도 상, 반복성 상</h3>
-  <p>담보 부동산 경매 개시부터 낙찰·명도까지 전 과정. 임차인 배당, 낙찰 후 점유자 처리, 유찰 반복 대응이 가장 빈번한 실무 이슈.</p>
-  <table>
-    <thead><tr><th>#</th><th>실제 질의 내용</th><th>빈도</th><th>난이도</th><th>반복성</th><th>등급</th></tr></thead>
-    <tbody>
-      <tr><td>B-01</td><td>임의경매 신청 전 채무자에게 별도 최고(催告) 해야 하나? — 상환 촉구 없이 곧바로 경매 신청 가능 여부</td><td>매우 높음</td><td>낮음</td><td>매우 높음</td><td><span class="tag tag-l1">L1</span></td></tr>
-      <tr><td>B-02</td><td>임차인이 있는 담보물 경매 — 최우선변제 소액보증금 기준(2023년 개정) 및 배당 예측 방법, 차순위 채권 회수 가능 금액 시뮬레이션</td><td>매우 높음</td><td>중간</td><td>높음</td><td><span class="tag tag-l2">L2</span></td></tr>
-      <tr><td>B-03</td><td>경매 낙찰 후 점유자 강제 퇴거 — 명도소송(6개월~1년+) vs 인도명령(신청 후 2~3개월) 선택 기준과 비용 비교</td><td>높음</td><td>중간</td><td>높음</td><td><span class="tag tag-l2">L2</span></td></tr>
-      <tr><td>B-04</td><td>선순위 가압류 이후 근저당 설정한 경우 — 경매 배당에서 가압류권자와 우선순위 충돌 해소 방법</td><td>중간</td><td>높음</td><td>중간</td><td><span class="tag tag-l2">L2</span></td></tr>
-      <tr><td>B-05</td><td>경매 최저가 3회 유찰 후 — 공매 전환(한국자산관리공사) vs 담보가등기 실행(청산 절차) 비교 및 선택 기준</td><td>중간</td><td>높음</td><td>중간</td><td><span class="tag tag-l2">L2</span></td></tr>
-      <tr><td>B-06</td><td>복수 담보(공동근저당) 설정 후 담보물 중 일부만 경매 신청 — 나머지 담보에 미치는 영향 및 이중배상 방지 방법</td><td>중간</td><td>높음</td><td>중간</td><td><span class="tag tag-l2">L2</span></td></tr>
-      <tr><td>B-07</td><td>경매 배당이의 — 선순위 임차인이 주장하는 보증금이 우리가 파악한 금액보다 클 때 이의신청 절차 및 증거 자료</td><td>중간</td><td>높음</td><td>중간</td><td><span class="tag tag-l2">L2</span></td></tr>
-      <tr><td>B-08</td><td>담보 부동산에 세입자의 대항력 유무 확인 방법 — 전입신고일·확정일자와 근저당 설정일 비교, 대항력 있는 임차인 처리 전략</td><td>매우 높음</td><td>중간</td><td>매우 높음</td><td><span class="tag tag-l2">L2</span></td></tr>
-      <tr><td>B-09</td><td>법인 담보물인데 법인이 사실상 폐업 상태 — 임의경매 신청 가능 여부, 법인 대표이사 개인 재산 병행 집행 방법</td><td>중간</td><td>높음</td><td>낮음</td><td><span class="tag tag-l2">L2</span></td></tr>
-      <tr><td>B-10</td><td>집합건물(상가) 담보 — 구분 소유권(호실)과 건물 전체 담보의 차이, 공용부분 경매 신청 가능 범위</td><td>낮음</td><td>매우 높음</td><td>낮음</td><td><span class="tag tag-l3">L3</span></td></tr>
-    </tbody>
-  </table>
+  <h3>2.3 타깃 고객 3단계</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>단계</th><th>대상</th><th>주요 법률 니즈</th><th>진입 방식</th><th>시점</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>1차</strong></td>
+          <td>저축은행(79개사), 새마을금고(3,242개), 캐피탈(50개+)</td>
+          <td>등기/담보, 채권관리, 금소법 대응</td>
+          <td>등기팀 기존 거래처 레퍼런스</td>
+          <td>즉시 착수</td>
+        </tr>
+        <tr>
+          <td><strong>2차</strong></td>
+          <td>상가연합회, 상가관리단, 프랜차이즈 가맹점협의체</td>
+          <td>임대차, 계약, 가맹 분쟁 반복 질의</td>
+          <td>1차 레퍼런스 활용</td>
+          <td>6개월 이후</td>
+        </tr>
+        <tr>
+          <td><strong>3차</strong></td>
+          <td>인천 남동공단 등 중소기업</td>
+          <td>계약, 노무, 규제 질의</td>
+          <td>1·2차 운영 검증 후 진입</td>
+          <td>12개월 이후</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-  <!-- 대분류 C -->
-  <h3>C. 채권 회수·소멸시효·NPL — 빈도 상, 오답 시 손실 최대</h3>
-  <p>소멸시효 실수 하나로 수억 원 채권이 소멸될 수 있다. 반복성이 높고 처리 절차가 명확한 항목은 L1 자동화, 사해행위·파산 참여는 L3 처리.</p>
-  <table>
-    <thead><tr><th>#</th><th>실제 질의 내용</th><th>빈도</th><th>난이도</th><th>반복성</th><th>등급</th></tr></thead>
-    <tbody>
-      <tr><td>C-01</td><td>소멸시효 기산점 확인 — 마지막 이자 납입일부터 5년 경과 직전, 내용증명 발송만으로 시효 중단 가능한가? (최고 효력 6개월 내 제소 의무)</td><td>매우 높음</td><td>낮음</td><td>매우 높음</td><td><span class="tag tag-l1">L1</span></td></tr>
-      <tr><td>C-02</td><td>채무자가 이자 일부를 납부(채무 승인)한 경우 — 소멸시효 중단 효과 발생 시점과 새로운 기산점 계산</td><td>높음</td><td>낮음</td><td>높음</td><td><span class="tag tag-l1">L1</span></td></tr>
-      <tr><td>C-03</td><td>사해행위취소소송 — 채무자가 대출 직후 배우자에게 부동산 증여한 경우, 취소 가능 기간(5년) 요건 및 수익자 악의 입증 방법</td><td>중간</td><td>높음</td><td>중간</td><td><span class="tag tag-l2">L2</span></td></tr>
-      <tr><td>C-04</td><td>채무자 개인회생 신청 시 — 담보채권은 회생 계획안에서 어떻게 취급되나? 회생 중 경매 신청이 중지되나?</td><td>중간</td><td>높음</td><td>중간</td><td><span class="tag tag-l2">L2</span></td></tr>
-      <tr><td>C-05</td><td>채무자 파산 선고 후 배당 신고 — 배당신청 기한, 채권 증명 서류 목록, 담보채권자와 비담보채권자 배당 순서</td><td>중간</td><td>중간</td><td>중간</td><td><span class="tag tag-l2">L2</span></td></tr>
-      <tr><td>C-06</td><td>연대보증인 사망 후 상속인이 상속 포기 — 보증 채무가 상속되나? 상속 포기 시 보증 채무에 미치는 효력</td><td>중간</td><td>높음</td><td>중간</td><td><span class="tag tag-l2">L2</span></td></tr>
-      <tr><td>C-07</td><td>지급명령 신청 절차 및 채무자 이의신청 후 소송 전환 시 대응 — 지급명령 vs 바로 소 제기 비용·기간 비교</td><td>높음</td><td>낮음</td><td>높음</td><td><span class="tag tag-l1">L1</span></td></tr>
-      <tr><td>C-08</td><td>채무자 행방불명 — 금융거래정보 조회 한계, 재산명시·재산조회 신청 절차 및 공시송달 방법</td><td>중간</td><td>중간</td><td>중간</td><td><span class="tag tag-l2">L2</span></td></tr>
-      <tr><td>C-09</td><td>NPL(부실채권) 매각 시 양수인 대항요건 — 채무자·보증인 별도 통지 방법(내용증명+확정일자), 통지 없이 양도해도 채무자에게 청구 가능한가?</td><td>중간</td><td>중간</td><td>높음</td><td><span class="tag tag-l2">L2</span></td></tr>
-      <tr><td>C-10</td><td>급여 압류 및 전부명령 — 민사집행법 246조 압류 금지 금액 계산, 은행 예금 채권 압류+전부명령으로 변제 받는 절차</td><td>높음</td><td>낮음</td><td>높음</td><td><span class="tag tag-l1">L1</span></td></tr>
-      <tr><td>C-11</td><td>법인 채무자 회생·파산 — 채권자 목록 제출 후 담보권 실행 허가신청(회생법 60조), 법원 판단 기준 및 소요 기간</td><td>낮음</td><td>매우 높음</td><td>낮음</td><td><span class="tag tag-l3">L3</span></td></tr>
-    </tbody>
-  </table>
+<!-- ══ 03 법률 질문 유형 ══ -->
+<section>
+  <div class="sec-head">
+    <div class="sec-num-block">03</div>
+    <h2>금융권 주요 법률 질문 유형 분석</h2>
+  </div>
 
-  <!-- 대분류 D -->
-  <h3>D. 금소법·규제 준수·내부 통제 — 빈도 중, 리스크 최상</h3>
+  <p>아래 질문들은 황해 등기팀이 저축은행·새마을금고를 대상으로 실제 수행한 자문 경험과 금융권 실무 레퍼런스를 바탕으로 도출했다. 분류 기준은 <strong>빈도(월 발생 횟수) · 반복성(유사 질문 재발 가능성) · 난이도(변호사 개입 필요 여부)</strong>이다.</p>
+
+  <h3>A. 여신 실행·계약 해석</h3>
+  <p>대출 계약 체결 전후 발생하는 질의. 표준 약관 해석은 인덱스화 가능하나, 개별 계약 조항 분쟁·차주 특수 상황은 변호사 개입이 필요하다.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>#</th><th style="min-width:320px;">실제 질의 내용</th><th>빈도</th><th>난이도</th><th>반복성</th><th>등급</th></tr></thead>
+      <tbody>
+        <tr><td>A-01</td><td>기한이익 상실 사유 발생 후 채무자에게 즉시 통보하지 않으면 이의 제기할 수 있나? 여신거래기본약관상 통보 의무 확인</td><td>매우 높음</td><td>낮음</td><td>높음</td><td><span class="tag tag-l1">L1</span></td></tr>
+        <tr><td>A-02</td><td>근저당권 설정 시 채권최고액 적정 비율 — 업권별 권장 기준(저축은행 130%, 새마을금고 120% 등)</td><td>매우 높음</td><td>낮음</td><td>매우 높음</td><td><span class="tag tag-l1">L1</span></td></tr>
+        <tr><td>A-03</td><td>법인 대출 시 대표이사 연대보증 요구 가능 여부 — 상법 542조의9(상장사 임원 보증 금지)·금소법 적용 범위 판단</td><td>높음</td><td>중간</td><td>높음</td><td><span class="tag tag-l2">L2</span></td></tr>
+        <tr><td>A-04</td><td>포괄근담보 설정 — 2020년 이후 개인 포괄근보증 금지 규정이 담보물 설정에도 영향을 미치나?</td><td>높음</td><td>중간</td><td>높음</td><td><span class="tag tag-l2">L2</span></td></tr>
+        <tr><td>A-05</td><td>사업자 명의 대출인데 실질이 가계자금인 경우 — DSR 규제 회피로 간주될 리스크 및 취급 가이드</td><td>중간</td><td>높음</td><td>중간</td><td><span class="tag tag-l2">L2</span></td></tr>
+        <tr><td>A-06</td><td>차주 신용등급 하락 시 추가 담보 청구 요건 — 여신거래기본약관 제5조 해석, 차주가 거부 시 기한이익 상실 발동 가능한가?</td><td>높음</td><td>중간</td><td>높음</td><td><span class="tag tag-l2">L2</span></td></tr>
+        <tr><td>A-07</td><td>만기 연장 심사 중 연체 발생 — 갱신 거절 통보 서면 요건 및 차주 이의신청 대응</td><td>중간</td><td>중간</td><td>높음</td><td><span class="tag tag-l2">L2</span></td></tr>
+        <tr><td>A-08</td><td>차주 사망 후 상속인이 3개월 내 상속 포기한 경우 — 채권 처리 전략 및 상속재산관리인 선임 필요 여부</td><td>중간</td><td>높음</td><td>중간</td><td><span class="tag tag-l2">L2</span></td></tr>
+        <tr><td>A-09</td><td>변동금리 대출에서 기준금리 상승 시 차주에게 사전 통지 의무 범위 — 금소법 정보 제공 의무와의 관계</td><td>높음</td><td>중간</td><td>높음</td><td><span class="tag tag-l2">L2</span></td></tr>
+        <tr><td>A-10</td><td>이사회 결의 없이 집행된 새마을금고 고액 여신 — 대외 여신 효력에 영향을 미치나? 이사 개인 책임 범위 (새마을금고법 제25조, 제29조)</td><td>낮음</td><td>매우 높음</td><td>낮음</td><td><span class="tag tag-l3">L3</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>B. 담보 권리 실행·경매·명도</h3>
+  <p>담보 부동산 경매 개시부터 낙찰·명도까지 전 과정. 임차인 배당 예측, 낙찰 후 점유자 처리, 유찰 반복 대응이 가장 빈번한 실무 이슈다.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>#</th><th style="min-width:320px;">실제 질의 내용</th><th>빈도</th><th>난이도</th><th>반복성</th><th>등급</th></tr></thead>
+      <tbody>
+        <tr><td>B-01</td><td>임의경매 신청 전 채무자에게 별도 최고(催告) 해야 하나? — 상환 촉구 없이 곧바로 경매 신청 가능 여부</td><td>매우 높음</td><td>낮음</td><td>매우 높음</td><td><span class="tag tag-l1">L1</span></td></tr>
+        <tr><td>B-02</td><td>임차인 있는 담보물 경매 — 최우선변제 소액보증금 기준(2023년 개정) 및 배당 예측, 차순위 채권 회수 가능 금액 시뮬레이션</td><td>매우 높음</td><td>중간</td><td>높음</td><td><span class="tag tag-l2">L2</span></td></tr>
+        <tr><td>B-03</td><td>경매 낙찰 후 점유자 강제 퇴거 — 명도소송(6개월~1년+) vs 인도명령(2~3개월) 선택 기준과 비용 비교</td><td>높음</td><td>중간</td><td>높음</td><td><span class="tag tag-l2">L2</span></td></tr>
+        <tr><td>B-04</td><td>담보 부동산에 세입자의 대항력 유무 확인 — 전입신고일·확정일자와 근저당 설정일 비교, 대항력 있는 임차인 처리 전략</td><td>매우 높음</td><td>중간</td><td>매우 높음</td><td><span class="tag tag-l2">L2</span></td></tr>
+        <tr><td>B-05</td><td>선순위 가압류 이후 근저당 설정한 경우 — 경매 배당에서 가압류권자와 우선순위 충돌 해소 방법</td><td>중간</td><td>높음</td><td>중간</td><td><span class="tag tag-l2">L2</span></td></tr>
+        <tr><td>B-06</td><td>경매 최저가 3회 유찰 후 — 공매 전환(한국자산관리공사) vs 담보가등기 실행(청산 절차) 비교 및 선택 기준</td><td>중간</td><td>높음</td><td>중간</td><td><span class="tag tag-l2">L2</span></td></tr>
+        <tr><td>B-07</td><td>복수 담보(공동근저당) 설정 후 일부만 경매 신청 — 나머지 담보에 미치는 영향 및 이중배상 방지 방법</td><td>중간</td><td>높음</td><td>중간</td><td><span class="tag tag-l2">L2</span></td></tr>
+        <tr><td>B-08</td><td>경매 배당이의 — 선순위 임차인이 주장하는 보증금이 우리 파악 금액보다 클 때 이의신청 절차 및 증거 자료</td><td>중간</td><td>높음</td><td>중간</td><td><span class="tag tag-l2">L2</span></td></tr>
+        <tr><td>B-09</td><td>법인이 실질 폐업 상태인 담보물 — 임의경매 신청 가능 여부, 대표이사 개인 재산 병행 집행 방법</td><td>중간</td><td>높음</td><td>낮음</td><td><span class="tag tag-l2">L2</span></td></tr>
+        <tr><td>B-10</td><td>집합건물(상가) 담보 — 구분 소유권(호실)과 건물 전체 담보의 차이, 공용부분 경매 신청 가능 범위</td><td>낮음</td><td>매우 높음</td><td>낮음</td><td><span class="tag tag-l3">L3</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>C. 채권 회수·소멸시효·NPL</h3>
+  <p>소멸시효 실수 하나로 수억 원 채권이 소멸될 수 있다. 반복성이 높고 절차가 명확한 항목은 L1 자동화, 사해행위·파산 참여는 L3 처리.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>#</th><th style="min-width:320px;">실제 질의 내용</th><th>빈도</th><th>난이도</th><th>반복성</th><th>등급</th></tr></thead>
+      <tbody>
+        <tr><td>C-01</td><td>소멸시효 기산점 — 마지막 이자 납입일부터 5년 경과 직전, 내용증명만으로 시효 중단 가능한가? (최고 효력 6개월 내 제소 의무)</td><td>매우 높음</td><td>낮음</td><td>매우 높음</td><td><span class="tag tag-l1">L1</span></td></tr>
+        <tr><td>C-02</td><td>이자 일부 납부(채무 승인)로 시효 중단 — 중단 효과 발생 시점과 새로운 기산점 계산</td><td>높음</td><td>낮음</td><td>높음</td><td><span class="tag tag-l1">L1</span></td></tr>
+        <tr><td>C-03</td><td>지급명령 신청 절차 — 채무자 이의신청 후 소송 전환 시 대응, 지급명령 vs 소 제기 직접 비용·기간 비교</td><td>높음</td><td>낮음</td><td>높음</td><td><span class="tag tag-l1">L1</span></td></tr>
+        <tr><td>C-04</td><td>급여 압류 및 전부명령 — 민사집행법 246조 압류 금지 금액 계산, 은행 예금 채권 압류+전부명령 절차</td><td>높음</td><td>낮음</td><td>높음</td><td><span class="tag tag-l1">L1</span></td></tr>
+        <tr><td>C-05</td><td>사해행위취소소송 — 채무자가 대출 직후 배우자에게 부동산 증여한 경우, 취소 가능 기간(5년) 요건 및 수익자 악의 입증 방법</td><td>중간</td><td>높음</td><td>중간</td><td><span class="tag tag-l2">L2</span></td></tr>
+        <tr><td>C-06</td><td>채무자 개인회생 신청 시 — 담보채권은 회생 계획안에서 어떻게 취급되나? 회생 중 경매 신청이 중지되나?</td><td>중간</td><td>높음</td><td>중간</td><td><span class="tag tag-l2">L2</span></td></tr>
+        <tr><td>C-07</td><td>채무자 파산 선고 후 배당 신고 — 배당신청 기한, 채권 증명 서류 목록, 담보채권자와 비담보채권자 배당 순서</td><td>중간</td><td>중간</td><td>중간</td><td><span class="tag tag-l2">L2</span></td></tr>
+        <tr><td>C-08</td><td>연대보증인 사망 후 상속인 상속 포기 — 보증 채무가 상속되나? 상속 포기 시 보증 채무에 미치는 효력</td><td>중간</td><td>높음</td><td>중간</td><td><span class="tag tag-l2">L2</span></td></tr>
+        <tr><td>C-09</td><td>채무자 행방불명 — 금융거래정보 조회 한계, 재산명시·재산조회 신청 절차 및 공시송달 방법</td><td>중간</td><td>중간</td><td>중간</td><td><span class="tag tag-l2">L2</span></td></tr>
+        <tr><td>C-10</td><td>NPL 매각 시 대항요건 — 채무자·보증인 별도 통지 방법(내용증명+확정일자), 통지 없이 양도해도 채무자에게 청구 가능한가?</td><td>중간</td><td>중간</td><td>높음</td><td><span class="tag tag-l2">L2</span></td></tr>
+        <tr><td>C-11</td><td>법인 채무자 회생 중 담보권 실행 허가 신청 (회생법 60조) — 법원 판단 기준 및 소요 기간</td><td>낮음</td><td>매우 높음</td><td>낮음</td><td><span class="tag tag-l3">L3</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>D. 금소법·규제 준수·내부 통제</h3>
   <p>2021년 금소법 시행 이후 질의가 급증했다. 오답 하나가 금감원 제재·과징금·계약 취소로 이어지며, 임직원 비위(부당대출·횡령) 발생 시 초동 대응이 전체 결과를 좌우한다.</p>
-  <table>
-    <thead><tr><th>#</th><th>실제 질의 내용</th><th>빈도</th><th>난이도</th><th>반복성</th><th>등급</th></tr></thead>
-    <tbody>
-      <tr><td>D-01</td><td>금소법 핵심설명서 — 저축은행·새마을금고 대출 상품도 대상인가? 미교부 시 차주가 계약 취소를 주장할 수 있나?</td><td>높음</td><td>중간</td><td>높음</td><td><span class="tag tag-l2">L2</span></td></tr>
-      <tr><td>D-02</td><td>금리인하요구권 — 차주가 신용등급 상승·소득 증가 증빙 제출 시 반드시 인하해야 하나? 거절 가능한 사유 체크리스트</td><td>높음</td><td>낮음</td><td>높음</td><td><span class="tag tag-l1">L1</span></td></tr>
-      <tr><td>D-03</td><td>대출 청약 철회 — 철회 기간(14일) 내 이미 집행된 담보설정 등기비용·인지세 환급 의무 범위</td><td>중간</td><td>낮음</td><td>높음</td><td><span class="tag tag-l1">L1</span></td></tr>
-      <tr><td>D-04</td><td>금감원 민원 접수 통보 후 30영업일 내 답변 의무 — 기한 초과 시 제재 수준, 답변서 작성 가이드</td><td>중간</td><td>중간</td><td>중간</td><td><span class="tag tag-l2">L2</span></td></tr>
-      <tr><td>D-05</td><td>채권추심법 위반 기준 — 허용 연락 시간대(오전 8시~오후 9시), 1일 연락 횟수 제한, 채무자 외 제3자에게 채무 사실 고지 금지 범위</td><td>높음</td><td>낮음</td><td>높음</td><td><span class="tag tag-l1">L1</span></td></tr>
-      <tr><td>D-06</td><td>대출 모집인이 불완전판매 — 금융기관의 감독 책임 범위 및 소비자에 대한 금융기관 연대 손해배상 책임</td><td>중간</td><td>높음</td><td>중간</td><td><span class="tag tag-l2">L2</span></td></tr>
-      <tr><td>D-07</td><td>개인정보(연체정보) 신용정보원 등록 전 통지 의무 — 7영업일 전 서면 통지 방법, 미통지 시 과태료 기준</td><td>높음</td><td>낮음</td><td>높음</td><td><span class="tag tag-l1">L1</span></td></tr>
-      <tr><td>D-08</td><td>임직원 부당대출(허위 담보 감정, 브로커 개입) 발각 — 즉시 조치 체크리스트, 금감원 보고 의무, 형사 고소 절차</td><td>낮음</td><td>매우 높음</td><td>낮음</td><td><span class="tag tag-l3">L3</span></td></tr>
-      <tr><td>D-09</td><td>지점장 전결 한도 초과 여신 — 내부통제 위반이 여신 효력에 미치는 영향 및 금감원 제재 수위</td><td>낮음</td><td>매우 높음</td><td>낮음</td><td><span class="tag tag-l3">L3</span></td></tr>
-      <tr><td>D-10</td><td>새마을금고 이사회 결의 없이 집행된 고액 여신 — 차주에 대해 대출 무효 주장 가능한가? 이사의 개인 손해배상 책임(새마을금고법 제25조, 제29조)</td><td>낮음</td><td>매우 높음</td><td>낮음</td><td><span class="tag tag-l3">L3</span></td></tr>
-    </tbody>
-  </table>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>#</th><th style="min-width:320px;">실제 질의 내용</th><th>빈도</th><th>난이도</th><th>반복성</th><th>등급</th></tr></thead>
+      <tbody>
+        <tr><td>D-01</td><td>금리인하요구권 — 차주가 신용등급 상승·소득 증가 증빙 제출 시 반드시 인하해야 하나? 거절 가능한 사유 체크리스트</td><td>높음</td><td>낮음</td><td>높음</td><td><span class="tag tag-l1">L1</span></td></tr>
+        <tr><td>D-02</td><td>대출 청약 철회 — 철회 기간(14일) 내 이미 집행된 담보설정 등기비용·인지세 환급 의무 범위</td><td>중간</td><td>낮음</td><td>높음</td><td><span class="tag tag-l1">L1</span></td></tr>
+        <tr><td>D-03</td><td>채권추심법 위반 기준 — 허용 연락 시간대(오전 8시~오후 9시), 1일 연락 횟수 제한, 제3자에게 채무 사실 고지 금지 범위</td><td>높음</td><td>낮음</td><td>높음</td><td><span class="tag tag-l1">L1</span></td></tr>
+        <tr><td>D-04</td><td>개인정보(연체정보) 신용정보원 등록 전 통지 의무 — 7영업일 전 서면 통지 방법, 미통지 시 과태료 기준</td><td>높음</td><td>낮음</td><td>높음</td><td><span class="tag tag-l1">L1</span></td></tr>
+        <tr><td>D-05</td><td>금소법 핵심설명서 — 저축은행·새마을금고 대출 상품도 대상인가? 미교부 시 차주가 계약 취소를 주장할 수 있나?</td><td>높음</td><td>중간</td><td>높음</td><td><span class="tag tag-l2">L2</span></td></tr>
+        <tr><td>D-06</td><td>금감원 민원 접수 통보 후 30영업일 내 답변 의무 — 기한 초과 시 제재 수준, 답변서 작성 가이드</td><td>중간</td><td>중간</td><td>중간</td><td><span class="tag tag-l2">L2</span></td></tr>
+        <tr><td>D-07</td><td>대출 모집인 불완전판매 — 금융기관의 감독 책임 범위 및 소비자에 대한 금융기관 연대 손해배상 책임</td><td>중간</td><td>높음</td><td>중간</td><td><span class="tag tag-l2">L2</span></td></tr>
+        <tr><td>D-08</td><td>임직원 부당대출(허위 담보 감정, 브로커 개입) 발각 — 즉시 조치 체크리스트, 금감원 보고 의무, 형사 고소 절차</td><td>낮음</td><td>매우 높음</td><td>낮음</td><td><span class="tag tag-l3">L3</span></td></tr>
+        <tr><td>D-09</td><td>지점장 전결 한도 초과 여신 — 내부통제 위반이 여신 효력에 미치는 영향 및 금감원 제재 수위</td><td>낮음</td><td>매우 높음</td><td>낮음</td><td><span class="tag tag-l3">L3</span></td></tr>
+        <tr><td>D-10</td><td>이사회 결의 없이 집행된 새마을금고 여신 무효 가능성 — 이사의 개인 손해배상 책임 (새마을금고법 제25조, 제29조)</td><td>낮음</td><td>매우 높음</td><td>낮음</td><td><span class="tag tag-l3">L3</span></td></tr>
+      </tbody>
+    </table>
+  </div>
 
-  <h3>가장 까다로운 질문군 — 반드시 L3 + 2인 검토</h3>
-  <table>
-    <thead><tr><th>질문 ID</th><th>내용</th><th>왜 까다로운가</th><th>오답 시 최대 손실</th></tr></thead>
-    <tbody>
-      <tr><td>A-10</td><td>이사회 결의 없는 새마을금고 여신 효력</td><td>대내 규정 위반이 대외 계약 효력에 미치는 영향 — 법원 판단 엇갈림</td><td>여신 전액 무효 위험</td></tr>
-      <tr><td>B-10</td><td>집합건물 구분소유권 vs 전체 담보</td><td>공용부분 처리, 구분소유권 경매 범위 불명확</td><td>담보 효력 상실</td></tr>
-      <tr><td>C-11</td><td>회생 중 담보권 실행 허가 신청</td><td>회생법 해석·실무례 변동, 법원별 판단 차이</td><td>경매 진행 중단·채권 회수 불가</td></tr>
-      <tr><td>D-08</td><td>임직원 부당대출 초동 대응</td><td>금감원 보고 타이밍·증거 보전 순서 실수 시 추가 제재</td><td>금융기관 면허 취소·과징금 수십억</td></tr>
-      <tr><td>D-09</td><td>내부통제 위반 여신의 효력 분쟁</td><td>계약법·금융규제법 교차, 차주의 선의·악의 여부에 따라 결론 달라짐</td><td>여신 무효·부당이득 반환 청구</td></tr>
-    </tbody>
-  </table>
-</div>
+  <h3>가장 까다로운 질문군 — L3 필수 + 2인 검토</h3>
+  <div class="note caution">
+    <div class="note-label">주의</div>
+    아래 5개 유형은 반드시 L3로 분류하고 시니어 변호사 2인 검토를 적용한다. 오답 시 여신 전액 무효·금감원 제재·면허 취소 등 금융기관에 치명적 결과가 발생할 수 있다.
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>질문 ID</th><th>내용</th><th>왜 까다로운가</th><th>오답 시 최대 손실</th></tr></thead>
+      <tbody>
+        <tr><td>A-10</td><td>이사회 결의 없는 새마을금고 여신 효력</td><td>대내 규정 위반이 대외 계약 효력에 미치는 영향 — 법원 판단 엇갈림</td><td>여신 전액 무효 위험</td></tr>
+        <tr><td>B-10</td><td>집합건물 구분소유권 vs 전체 담보</td><td>공용부분 처리, 구분소유권 경매 범위 불명확</td><td>담보 효력 상실</td></tr>
+        <tr><td>C-11</td><td>회생 중 담보권 실행 허가 신청</td><td>회생법 해석·실무례 변동, 법원별 판단 차이</td><td>경매 진행 중단·채권 회수 불가</td></tr>
+        <tr><td>D-08</td><td>임직원 부당대출 초동 대응</td><td>금감원 보고 타이밍·증거 보전 순서 실수 시 추가 제재</td><td>금융기관 면허 취소·과징금 수십억</td></tr>
+        <tr><td>D-09</td><td>내부통제 위반 여신의 효력 분쟁</td><td>계약법·금융규제법 교차, 차주의 선의·악의 여부에 따라 결론 달라짐</td><td>여신 무효·부당이득 반환 청구</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-<!-- ══ 04 질문 등급 분류 체계 ══ -->
-<div class="section">
-  <div class="section-header">
-    <div class="section-num">04</div>
-    <div>
-      <div class="section-title">질문 등급 분류 및 변호사 공수 최적화</div>
-      <div class="section-desc">L1·L2·L3 등급 정의, 처리 방법, 예상 공수, 자동화 전략</div>
+<!-- ══ 04 등급 분류 ══ -->
+<section>
+  <div class="sec-head">
+    <div class="sec-num-block">04</div>
+    <h2>질문 등급 분류 및 변호사 공수 최적화</h2>
+  </div>
+
+  <h3>4.1 등급 정의 및 처리 흐름</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>등급</th><th>정의</th><th>처리 주체</th><th>SLA</th><th>과금</th><th>예상 비율</th></tr></thead>
+      <tbody>
+        <tr><td><span class="tag tag-l1">L1</span> 인덱스 즉답</td><td>반복 패턴, 표준 절차, 체크리스트로 해결 가능. 변호사 검토 불필요.</td><td>AI 인덱스 + 템플릿</td><td>5분 이내</td><td>구독 포함</td><td>40~50%</td></tr>
+        <tr><td><span class="tag tag-l2">L2</span> 변호사 검토</td><td>사실관계 확인 필요, 비표준 상황, 구체적 판단 요구.</td><td>담당군 변호사</td><td>24~48시간</td><td>구독 포함(건수 한도 내)</td><td>40~50%</td></tr>
+        <tr><td><span class="tag tag-l3">L3</span> 정식 산출물</td><td>법률의견서, 대외 공문, 소송 착수 등 고공수 업무.</td><td>시니어 변호사 + 2인 검토</td><td>별도 협의 3~5영업일</td><td>별도 과금</td><td>5~10%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>4.2 L1 처리 프로세스</h3>
+  <div class="flow">
+    <div class="flow-step">질문 등록<small>구조화 폼</small></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">태그 자동 분류<small>키워드 매칭</small></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">인덱스 검색<small>유사도 0.85↑</small></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">표준 답변 제공<small>리스크 신호 포함</small></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">고객 확인<small>충분/불충분 선택</small></div>
+  </div>
+  <p style="font-size:12.5px;color:var(--muted);">'불충분' 선택 시 자동으로 L2 라우팅. 변호사는 L1 처리 건 중 무작위 5% 샘플 품질 점검.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>L1 예시 질문</th><th>답변 형태</th><th>처리 시간</th></tr></thead>
+      <tbody>
+        <tr><td>소멸시효 기산점 계산 (마지막 변제일 입력 → 잔여 시효 자동 계산)</td><td>시효 계산기 + 중단 조치 체크리스트</td><td>즉시</td></tr>
+        <tr><td>임의경매 신청 전 최고(催告) 의무 여부</td><td>결론 1줄 + 관련 조항 링크</td><td>즉시</td></tr>
+        <tr><td>지급명령 신청 서류 목록 및 작성 요령</td><td>서류 체크리스트 + 양식 다운로드</td><td>즉시</td></tr>
+        <tr><td>금리인하요구권 거절 가능 사유</td><td>거절 사유 목록 + 거절 통보 문구 샘플</td><td>즉시</td></tr>
+        <tr><td>급여 압류 가능 금액 계산 (민사집행법 246조)</td><td>압류 가능 금액 자동 계산기</td><td>즉시</td></tr>
+        <tr><td>신용정보원 연체 등록 전 7영업일 사전 통지 양식</td><td>표준 통지 서면 양식 다운로드</td><td>즉시</td></tr>
+        <tr><td>채권추심법 연락 허용 시간·횟수 기준표</td><td>시간대·횟수 기준 + 위반 시 제재 수준</td><td>즉시</td></tr>
+        <tr><td>대출 청약철회 시 환급 불가 비용 목록</td><td>환급 대상 / 환급 불가 항목 구분 표</td><td>즉시</td></tr>
+        <tr><td>근저당 채권최고액 적정 비율 (원금 기준)</td><td>업권별 권장 비율표</td><td>즉시</td></tr>
+        <tr><td>금감원 검사 대비 여신 서류 보존 기간</td><td>서류 항목별 보존 기간 표</td><td>즉시</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>4.3 L2 필수 입력 항목 (구조화 폼)</h3>
+  <div class="card-grid2">
+    <div class="card">
+      <div class="card-title">공통 항목</div>
+      <ul>
+        <li>질의 분류 (A 여신계약 / B 담보경매 / C 채권관리 / D 규제민원)</li>
+        <li>질의 목적 (채권 보전 / 회수 / 민원 대응 / 계약 검토)</li>
+        <li>핵심 사실관계 (날짜·당사자·계약 존재 여부)</li>
+        <li>기대 결론 (상대방에게 요구할 내용)</li>
+        <li>긴급 여부 (48시간 기본 / 24시간 추가 과금)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title">등기·담보 추가 항목</div>
+      <ul>
+        <li>여신 계좌번호</li>
+        <li>담보물 종류·등기번호</li>
+        <li>선순위 권리 현황</li>
+        <li>대출 잔액·이자 연체 현황</li>
+        <li>임차인 존재 여부 및 전입신고일</li>
+      </ul>
     </div>
   </div>
 
-  <h3>가. 등급 정의 및 처리 흐름</h3>
-  <table>
-    <thead>
-      <tr><th>등급</th><th>정의</th><th>처리 주체</th><th>SLA</th><th>과금</th><th>비율(예측)</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="tag tag-l1">L1</span> 인덱스 즉답</td>
-        <td>반복 패턴, 표준 절차, 체크리스트로 해결 가능. 변호사 검토 불필요.</td>
-        <td>AI 인덱스 + 템플릿</td>
-        <td>즉시(5분 이내)</td>
-        <td>구독 포함</td>
-        <td>40~50%</td>
-      </tr>
-      <tr>
-        <td><span class="tag tag-l2">L2</span> 변호사 검토</td>
-        <td>사실관계 확인 필요, 비표준 상황, 구체적 판단 요구.</td>
-        <td>담당군 변호사</td>
-        <td>24~48시간</td>
-        <td>구독 포함(건수 한도 내)</td>
-        <td>40~50%</td>
-      </tr>
-      <tr>
-        <td><span class="tag tag-l3">L3</span> 정식 산출물</td>
-        <td>법률의견서, 대외 공문, 계약서 전면 작성, 소송 착수 등 고공수 업무.</td>
-        <td>시니어 변호사 + 2인 검토</td>
-        <td>별도 협의(3~5영업일)</td>
-        <td>별도 과금</td>
-        <td>5~10%</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h3>나. L1 — 인덱스 즉답 상세</h3>
-  <p>변호사 개입 없이 처리 가능한 질문. 반복성이 높고 답변이 표준화된 항목. AI가 인덱스에서 매칭 후 체크리스트·표준 양식·규정 조항을 자동 제공.</p>
-  <div class="card">
-    <div class="card-title">L1 처리 프로세스</div>
-    <div class="flow">
-      <div class="flow-step">질문 등록<br><small style="color:#94A3B8">구조화 폼</small></div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-step">태그 자동 분류<br><small style="color:#94A3B8">키워드 매칭</small></div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-step">인덱스 검색<br><small style="color:#94A3B8">유사도 0.85↑</small></div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-step">표준 답변 제공<br><small style="color:#94A3B8">리스크 신호 포함</small></div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-step">고객 확인<br><small style="color:#94A3B8">충분/불충분 선택</small></div>
-    </div>
-    <p style="margin-top:12px;font-size:12px;color:#64748B">'불충분' 선택 시 자동으로 L2 라우팅. 변호사는 L1 처리 건 중 무작위 5% 샘플 품질 점검.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>L2 예시 질문</th><th>담당군</th><th>초기 공수</th><th>레퍼런스 축적 후</th></tr></thead>
+      <tbody>
+        <tr><td>임차인 있는 담보 경매 — 최우선변제 소액보증금 배당 시뮬레이션</td><td>G1 등기/담보</td><td>2~3시간</td><td>0.5시간</td></tr>
+        <tr><td>대표이사 연대보증 요구 가능 범위 검토 (법인 대출)</td><td>G3 계약/공문</td><td>1~2시간</td><td>0.3시간</td></tr>
+        <tr><td>차주 사망 후 상속포기 시 채권 처리 전략</td><td>G2 채권관리</td><td>2~3시간</td><td>0.5시간</td></tr>
+        <tr><td>사해행위취소소송 요건 검토 및 착수 여부 판단</td><td>G2 채권관리</td><td>3~4시간</td><td>1시간</td></tr>
+        <tr><td>금소법 민원 답변서 검토 및 수정</td><td>G4 민원/규제</td><td>2~3시간</td><td>1시간</td></tr>
+        <tr><td>NPL 매각 시 채무자·보증인 통지 서면 작성</td><td>G2 채권관리</td><td>1~1.5시간</td><td>0.3시간</td></tr>
+        <tr><td>경매 낙찰 후 명도소송 vs 인도명령 선택 자문</td><td>G1 등기/담보</td><td>1.5~2시간</td><td>0.4시간</td></tr>
+        <tr><td>대출 모집인 불완전판매 연대책임 범위 분석</td><td>G4 민원/규제</td><td>2~3시간</td><td>0.8시간</td></tr>
+      </tbody>
+    </table>
   </div>
-  <table>
-    <thead><tr><th>L1 예시 질문</th><th>답변 형태</th><th>처리 시간</th></tr></thead>
-    <tbody>
-      <tr><td>소멸시효 기산점 계산 (마지막 변제일 입력 → 잔여 시효 자동 계산)</td><td>시효 계산기 + 중단 조치 체크리스트</td><td>즉시</td></tr>
-      <tr><td>임의경매 신청 전 최고(催告) 의무 여부</td><td>결론 1줄 + 관련 조항 (최고 의무 없음, 다만 채무자 통지 권고)</td><td>즉시</td></tr>
-      <tr><td>지급명령 신청 서류 목록 및 작성 요령</td><td>서류 체크리스트 + 양식 다운로드</td><td>즉시</td></tr>
-      <tr><td>금리인하요구권 거절 가능 사유</td><td>거절 사유 목록 + 거절 통보 문구 샘플</td><td>즉시</td></tr>
-      <tr><td>급여 압류 가능 금액 계산 (민사집행법 246조)</td><td>압류 가능 금액 자동 계산기</td><td>즉시</td></tr>
-      <tr><td>신용정보원 연체 등록 전 7영업일 사전 통지 양식</td><td>표준 통지 서면 양식 다운로드</td><td>즉시</td></tr>
-      <tr><td>채권추심법 연락 허용 시간·횟수 기준표</td><td>시간대·횟수 기준 + 위반 시 제재 수준</td><td>즉시</td></tr>
-      <tr><td>대출 청약철회 시 환급 불가 비용 목록</td><td>환급 대상 / 환급 불가 항목 구분 표</td><td>즉시</td></tr>
-      <tr><td>근저당 채권최고액 적정 비율 (원금 기준)</td><td>업권별 권장 비율표 (저축은행 130%, 새마을금고 120% 등)</td><td>즉시</td></tr>
-      <tr><td>금감원 검사 대비 여신 서류 보존 기간</td><td>서류 항목별 보존 기간 표</td><td>즉시</td></tr>
-    </tbody>
-  </table>
 
-  <h3>다. L2 — 변호사 검토 상세</h3>
-  <p>사실관계에 따라 답변이 달라지는 질문. 계좌번호·담보물·채무자 정보 등 구체적 맥락을 받아야 정확한 답변이 가능. 담당군 변호사가 48시간 내 답변.</p>
-  <div class="card">
-    <div class="card-title">L2 필수 입력 항목 (구조화 폼)</div>
-    <div class="grid2">
-      <div>
-        <h4>공통 항목</h4>
-        <ul class="checklist">
-          <li>질의 분류 (등기/담보 / 채권관리 / 여신계약 / 민원규제)</li>
-          <li>질의 목적 (채권 보전 / 회수 / 민원 대응 / 계약 검토)</li>
-          <li>핵심 사실관계 (날짜·당사자·계약 존재 여부)</li>
-          <li>기대 결론 (상대방에게 요구할 내용)</li>
-          <li>긴급 여부 (48h / 24h+추가과금)</li>
-        </ul>
-      </div>
-      <div>
-        <h4>등기/담보 추가 항목</h4>
-        <ul class="checklist">
-          <li>여신 계좌번호</li>
-          <li>담보물 종류·등기번호</li>
-          <li>선순위 권리 현황</li>
-          <li>대출 잔액·이자 연체 현황</li>
-        </ul>
-      </div>
-    </div>
+  <h3>4.4 L3 — 정식 산출물 상세</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>L3 예시</th><th>산출물</th><th>예상 공수</th><th>별도 과금(참고)</th></tr></thead>
+      <tbody>
+        <tr><td>임직원 부당대출 발각 — 금감원 보고 + 형사 고소 + 민사 손해배상 전략</td><td>대응 전략서 + 고소장 + 내부 보고서</td><td>12~16시간</td><td>300~500만원</td></tr>
+        <tr><td>이사회 결의 없이 집행된 고액 여신의 효력 다툼 법률의견서</td><td>법률의견서 (8~12p) + 판례 분석</td><td>8~12시간</td><td>200~400만원</td></tr>
+        <tr><td>법인 채무자 회생 중 담보권 실행 허가 신청 (회생법 60조)</td><td>법원 허가 신청서 + 채권자 주장 서면</td><td>10~15시간</td><td>250~400만원</td></tr>
+        <tr><td>집합건물 전체 담보 — 구분소유권 경매 범위 법적 검토</td><td>법률의견서 + 판례 정리</td><td>8~10시간</td><td>200~300만원</td></tr>
+        <tr><td>대출 모집인 사기 — 금융기관 연대책임 주장에 대한 소송 대응</td><td>소송 전략서 + 답변서</td><td>15시간+</td><td>수임료 별도</td></tr>
+        <tr><td>내부통제 위반(전결 한도 초과 여신) — 금감원 제재 대응 + 이사회 보고</td><td>리스크 진단 보고서 + 대응 계획</td><td>8~12시간</td><td>200~350만원</td></tr>
+      </tbody>
+    </table>
   </div>
-  <table>
-    <thead><tr><th>L2 예시 질문</th><th>담당군</th><th>예상 공수</th><th>레퍼런스 축적 후</th></tr></thead>
-    <tbody>
-      <tr><td>임차인 있는 담보 경매 — 최우선변제 소액보증금 배당 시뮬레이션</td><td>G1 등기/담보</td><td>2~3시간</td><td>0.5시간</td></tr>
-      <tr><td>대표이사 연대보증 요구 가능 범위 검토 (법인 대출)</td><td>G3 계약/공문</td><td>1~2시간</td><td>0.3시간</td></tr>
-      <tr><td>차주 사망 후 상속포기 시 채권 처리 전략</td><td>G2 채권관리</td><td>2~3시간</td><td>0.5시간</td></tr>
-      <tr><td>사해행위취소소송 요건 검토 및 착수 여부 판단</td><td>G2 채권관리</td><td>3~4시간</td><td>1시간</td></tr>
-      <tr><td>금소법 민원 답변서 검토 및 수정</td><td>G4 민원/규제</td><td>2~3시간</td><td>1시간</td></tr>
-      <tr><td>NPL 매각 시 채무자·보증인 통지 서면 작성</td><td>G2 채권관리</td><td>1~1.5시간</td><td>0.3시간</td></tr>
-      <tr><td>경매 낙찰 후 명도소송 vs 인도명령 선택 자문</td><td>G1 등기/담보</td><td>1.5~2시간</td><td>0.4시간</td></tr>
-      <tr><td>대출 모집인 불완전판매 연대책임 범위 분석</td><td>G4 민원/규제</td><td>2~3시간</td><td>0.8시간</td></tr>
-    </tbody>
-  </table>
 
-  <h3>라. L3 — 정식 산출물 상세</h3>
-  <p>반복성이 낮고 공수가 크며, 오답 시 손실이 큰 고위험 업무. 구독 외 별도 과금. 시니어 변호사 주도 + 2인 검토 필수.</p>
-  <table>
-    <thead><tr><th>L3 예시</th><th>산출물</th><th>예상 공수</th><th>별도 과금(참고)</th></tr></thead>
-    <tbody>
-      <tr><td>임직원 부당대출(허위 담보) 발각 — 금감원 보고 + 형사 고소 + 민사 손해배상 전략 수립</td><td>대응 전략서 + 고소장 + 내부 보고서</td><td>12~16시간</td><td>300~500만원</td></tr>
-      <tr><td>이사회 결의 없이 집행된 고액 여신의 효력 다툼 — 법률의견서 작성 (새마을금고법 제25조, 제29조)</td><td>법률의견서 (8~12p) + 판례 분석</td><td>8~12시간</td><td>200~400만원</td></tr>
-      <tr><td>법인 채무자 회생 중 담보권 실행 허가 신청 (회생법 60조)</td><td>법원 허가 신청서 + 채권자 주장 서면</td><td>10~15시간</td><td>250~400만원</td></tr>
-      <tr><td>집합건물 전체 담보 — 구분 소유권 경매 범위 법적 검토 의견서</td><td>법률의견서 + 판례 정리</td><td>8~10시간</td><td>200~300만원</td></tr>
-      <tr><td>대출 모집인 사기 피해 — 금융기관 연대책임 주장에 대한 소 제기 대응</td><td>소송 전략서 + 답변서</td><td>15시간+</td><td>수임료 별도</td></tr>
-      <tr><td>내부통제 위반(전결 한도 초과 여신) — 금감원 제재 대응 + 이사회 보고서 작성</td><td>리스크 진단 보고서 + 대응 계획</td><td>8~12시간</td><td>200~350만원</td></tr>
-    </tbody>
-  </table>
-
-  <h3>마. 변호사 공수 절감 로드맵</h3>
-  <div class="card">
-    <div class="card-title">레퍼런스 축적 → 공수 자동 감소 구조</div>
+  <h3>4.5 변호사 공수 절감 로드맵</h3>
+  <div class="table-wrap">
     <table>
       <thead><tr><th>시점</th><th>L1 자동화율</th><th>L2 평균 공수</th><th>변호사 1인 처리 가능 건수/월</th></tr></thead>
       <tbody>
@@ -490,24 +707,24 @@ ul.checklist li::before{content:"—";color:#94A3B8;flex-shrink:0}
         <tr><td>성숙기 (24개월)</td><td>70%+</td><td>0.3~0.5시간/건</td><td>80건+</td></tr>
       </tbody>
     </table>
-    <p style="font-size:12px;color:#64748B;margin-top:8px">레퍼런스 1건 = 다음 유사 질문의 답변 초안 자동 생성. 변호사는 확인·보정만. 이것이 단가를 낮추지 않고 원가를 낮추는 핵심 메커니즘.</p>
   </div>
-</div>
+  <div class="note">
+    <div class="note-label">구조 원리</div>
+    레퍼런스 1건 = 다음 유사 질문의 답변 초안 자동 생성. 변호사는 확인·보정만 수행. 이것이 단가를 낮추지 않고 원가를 낮추는 핵심 메커니즘이다.
+  </div>
+</section>
 
-<!-- ══ 05 엔진 전환 방안 ══ -->
-<div class="section">
-  <div class="section-header">
-    <div class="section-num">05</div>
-    <div>
-      <div class="section-title">아파트집사 → 뱅크법률집사 엔진 전환 방안</div>
-      <div class="section-desc">RAG 데이터 교체, 입력 폼 재설계, 라우팅 변경, 인덱스 구조 전환</div>
-    </div>
+<!-- ══ 05 엔진 전환 ══ -->
+<section>
+  <div class="sec-head">
+    <div class="sec-num-block">05</div>
+    <h2>아파트집사 → 뱅크법률집사 엔진 전환 방안</h2>
   </div>
 
-  <h3>가. 변경 불필요 — 그대로 활용</h3>
+  <h3>5.1 변경 불필요 — 그대로 활용</h3>
   <div class="card">
-    <p>아래 구조는 도메인 무관하게 이식 가능하므로 재개발 불필요.</p>
-    <ul class="checklist">
+    <div class="card-title">도메인 무관하게 이식 가능한 구조</div>
+    <ul>
       <li>질의 등록 → 라우팅 → 변호사 답변 → 게시 → 축적의 전체 워크플로우 엔진</li>
       <li>SLA 타이머 및 에스컬레이션 알림 시스템</li>
       <li>Q&A 인덱스 저장 구조 (고유번호 / 작성일 / 태그 / 담당군)</li>
@@ -516,12 +733,10 @@ ul.checklist li::before{content:"—";color:#94A3B8;flex-shrink:0}
     </ul>
   </div>
 
-  <h3>나. 변경 필요 — 4개 핵심 모듈</h3>
-
-  <div class="engine-row">
+  <h3>5.2 RAG 데이터 교체</h3>
+  <div class="engine-grid">
     <div class="engine-col old">
       <div class="engine-col-title">아파트집사 (현재)</div>
-      <div class="engine-item"><strong>RAG 데이터</strong></div>
       <div class="engine-item">공동주택관리법</div>
       <div class="engine-item">집합건물법</div>
       <div class="engine-item">주택법</div>
@@ -530,8 +745,7 @@ ul.checklist li::before{content:"—";color:#94A3B8;flex-shrink:0}
     </div>
     <div class="engine-arrow">→</div>
     <div class="engine-col new">
-      <div class="engine-col-title">뱅크법률집사 (금융권)</div>
-      <div class="engine-item"><strong>RAG 데이터 교체</strong></div>
+      <div class="engine-col-title">뱅크법률집사 (교체)</div>
       <div class="engine-item">은행법 / 저축은행법 / 새마을금고법</div>
       <div class="engine-item">여신전문금융업법</div>
       <div class="engine-item">금융소비자보호법 + 시행령</div>
@@ -541,9 +755,10 @@ ul.checklist li::before{content:"—";color:#94A3B8;flex-shrink:0}
     </div>
   </div>
 
-  <div class="engine-row" style="margin-top:16px">
+  <h3>5.3 질문 입력 폼 재설계</h3>
+  <div class="engine-grid">
     <div class="engine-col old">
-      <div class="engine-col-title">질문 입력 폼 (현재)</div>
+      <div class="engine-col-title">아파트집사 폼 (현재)</div>
       <div class="engine-item">아파트 단지명</div>
       <div class="engine-item">세대수</div>
       <div class="engine-item">입주 예정일</div>
@@ -551,102 +766,105 @@ ul.checklist li::before{content:"—";color:#94A3B8;flex-shrink:0}
     </div>
     <div class="engine-arrow">→</div>
     <div class="engine-col new">
-      <div class="engine-col-title">질문 입력 폼 (금융권)</div>
+      <div class="engine-col-title">뱅크법률집사 폼 (교체)</div>
       <div class="engine-item">기관명 / 지점명</div>
       <div class="engine-item">여신 계좌번호 (선택)</div>
       <div class="engine-item">담보물 종류 / 등기번호 (선택)</div>
-      <div class="engine-item">문의 분류 (4개 담당군 선택)</div>
+      <div class="engine-item">문의 분류 (4개 담당군)</div>
       <div class="engine-item">질의 목적 (채권보전/회수/민원/계약)</div>
       <div class="engine-item">기대 결론 (상대방에게 요구할 것)</div>
-      <div class="engine-item">관련 사실관계 (핵심 날짜/당사자)</div>
+      <div class="engine-item">핵심 사실관계 (날짜/당사자)</div>
       <div class="engine-item">긴급 여부</div>
     </div>
   </div>
 
-  <div class="engine-row" style="margin-top:16px">
+  <h3>5.4 담당군 라우팅 재설계</h3>
+  <div class="engine-grid">
     <div class="engine-col old">
-      <div class="engine-col-title">담당군 라우팅 (현재)</div>
+      <div class="engine-col-title">아파트집사 담당군 (현재)</div>
       <div class="engine-item">집단등기팀</div>
       <div class="engine-item">하자·건축팀</div>
       <div class="engine-item">분쟁·소송팀</div>
     </div>
     <div class="engine-arrow">→</div>
     <div class="engine-col new">
-      <div class="engine-col-title">담당군 라우팅 (금융권)</div>
-      <div class="engine-item"><strong>G1</strong> 등기/담보팀 — A 영역</div>
-      <div class="engine-item"><strong>G2</strong> 채권관리팀 — B 영역</div>
-      <div class="engine-item"><strong>G3</strong> 계약/공문팀 — C 영역</div>
+      <div class="engine-col-title">뱅크법률집사 담당군 (교체)</div>
+      <div class="engine-item"><strong>G1</strong> 등기/담보팀 — A·B 영역</div>
+      <div class="engine-item"><strong>G2</strong> 채권관리팀 — C 영역</div>
+      <div class="engine-item"><strong>G3</strong> 계약/공문팀 — 여신계약 검토</div>
       <div class="engine-item"><strong>G4</strong> 민원/규제팀 — D 영역</div>
       <div class="engine-item">예외: 운영 매니저 수동 배정</div>
     </div>
   </div>
 
-  <h3>다. 개발 소요 및 우선순위</h3>
-  <table>
-    <thead><tr><th>모듈</th><th>작업 내용</th><th>예상 공수</th><th>우선순위</th></tr></thead>
-    <tbody>
-      <tr><td>RAG 데이터 교체</td><td>금융법 6종 PDF 파싱 + 청크 분할 + 임베딩</td><td>2~3주</td><td>1순위</td></tr>
-      <tr><td>질문 입력 폼 재설계</td><td>UI 수정 + 필수항목 추가 + 유효성 검사</td><td>1주</td><td>1순위</td></tr>
-      <tr><td>담당군 라우팅 수정</td><td>태그→담당군 매핑 테이블 교체</td><td>0.5주</td><td>1순위</td></tr>
-      <tr><td>L1 인덱스 초기 구축</td><td>30~50개 표준 Q&A + 체크리스트 작성</td><td>3~4주</td><td>2순위</td></tr>
-      <tr><td>고객 포털 화이트라벨</td><td>로고·색상만 교체한 기관별 전용 포털</td><td>1주</td><td>2순위</td></tr>
-      <tr><td>자동 규제 알림</td><td>금융당국 공고 RSS → 해당 고객 자동 발송</td><td>2주</td><td>3순위</td></tr>
-    </tbody>
-  </table>
-  <div class="highlight-box"><p><strong>총 개발 소요 추정: 6~8주</strong> — 기존 아파트집사 엔진을 재사용하기 때문에 신규 개발 대비 70% 이상 공수 절감 가능. 파일럿 고객 계약 후 즉시 구축 착수 가능.</p></div>
-</div>
+  <h3>5.5 개발 소요 및 우선순위</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>모듈</th><th>작업 내용</th><th>예상 공수</th><th>우선순위</th></tr></thead>
+      <tbody>
+        <tr><td>RAG 데이터 교체</td><td>금융법 6종 PDF 파싱 + 청크 분할 + 임베딩</td><td>2~3주</td><td>1순위</td></tr>
+        <tr><td>질문 입력 폼 재설계</td><td>UI 수정 + 필수항목 추가 + 유효성 검사</td><td>1주</td><td>1순위</td></tr>
+        <tr><td>담당군 라우팅 수정</td><td>태그→담당군 매핑 테이블 교체</td><td>0.5주</td><td>1순위</td></tr>
+        <tr><td>L1 인덱스 초기 구축</td><td>30~50개 표준 Q&A + 체크리스트 작성</td><td>3~4주</td><td>2순위</td></tr>
+        <tr><td>고객 포털 화이트라벨</td><td>기관별 로고·색상 교체 전용 포털</td><td>1주</td><td>2순위</td></tr>
+        <tr><td>자동 규제 알림</td><td>금융당국 공고 RSS → 해당 고객 자동 발송</td><td>2주</td><td>3순위</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note notice">
+    <div class="note-label">개발 소요 요약</div>
+    총 6~8주 — 기존 아파트집사 엔진을 재사용하기 때문에 신규 개발 대비 70% 이상 공수 절감 가능. 파일럿 고객 계약 후 즉시 구축 착수 가능하다.
+  </div>
+</section>
 
 <!-- ══ 06 가격 체계 ══ -->
-<div class="section">
-  <div class="section-header">
-    <div class="section-num">06</div>
-    <div>
-      <div class="section-title">가격 체계 및 수익 모델</div>
-      <div class="section-desc">단계형 구독 가격 체계, 건수 정의, 추가 과금, 수익 시뮬레이션</div>
-    </div>
+<section>
+  <div class="sec-head">
+    <div class="sec-num-block">06</div>
+    <h2>가격 체계 및 수익 모델</h2>
   </div>
 
-  <h3>가. 구독 티어</h3>
-  <div style="display:flex;gap:16px;margin:16px 0;flex-wrap:wrap">
+  <h3>6.1 구독 티어</h3>
+  <div class="price-grid">
     <div class="price-card">
-      <div class="price-card-header">
-        <div class="price-tier">STARTER · 지점/소형 금고</div>
-        <div class="price-amount">50만<span>원/월</span></div>
+      <div class="price-header">
+        <div class="p-tier">Starter</div>
+        <div class="p-amount">50만<span>원/월</span></div>
       </div>
-      <div class="price-card-body">
+      <div class="price-body">
         <div class="price-item">L1 무제한 (즉시 답변)</div>
         <div class="price-item">L2 월 5건 포함</div>
-        <div class="price-item">담당군 1개 (등기/담보 또는 채권관리 중 선택)</div>
+        <div class="price-item">담당군 1개 선택</div>
         <div class="price-item">SLA: L2 48시간</div>
         <div class="price-item">고객 포털 1계정</div>
         <div class="price-item">L2 초과건: 건당 10만원</div>
         <div class="price-item">L3: 별도 협의</div>
-        <p style="font-size:11px;color:#94A3B8;margin-top:12px">새마을금고 단위 금고, 소형 저축은행 지점, 소형 캐피탈사</p>
+        <p style="font-size:11.5px;color:var(--muted);margin-top:12px;padding-top:8px;border-top:1px solid var(--border);">새마을금고 단위금고, 소형 저축은행 지점, 소형 캐피탈사</p>
       </div>
     </div>
     <div class="price-card">
-      <div class="price-card-header featured">
-        <div class="price-tier">STANDARD · 본점 관리</div>
-        <div class="price-amount">100만<span>원/월</span></div>
+      <div class="price-header featured">
+        <div class="p-tier">Standard</div>
+        <div class="p-amount">100만<span>원/월</span></div>
       </div>
-      <div class="price-card-body">
+      <div class="price-body">
         <div class="price-item">L1 무제한</div>
         <div class="price-item">L2 월 15건 포함</div>
         <div class="price-item">담당군 전체 (4개 그룹)</div>
-        <div class="price-item">SLA: L2 48시간 / 긴급 24시간(월 3건)</div>
-        <div class="price-item">고객 포털 3계정 (지점 공유)</div>
+        <div class="price-item">SLA: 48시간 / 긴급 24시간 (월 3건)</div>
+        <div class="price-item">고객 포털 3계정</div>
         <div class="price-item">월 1회 정기 법률 리포트</div>
         <div class="price-item">L2 초과건: 건당 8만원</div>
         <div class="price-item">L3: 정가의 20% 할인</div>
-        <p style="font-size:11px;color:#94A3B8;margin-top:12px">중형 저축은행, 새마을금고 지역 거점, 캐피탈 본점</p>
+        <p style="font-size:11.5px;color:var(--muted);margin-top:12px;padding-top:8px;border-top:1px solid var(--border);">중형 저축은행, 새마을금고 지역 거점, 캐피탈 본점</p>
       </div>
     </div>
     <div class="price-card">
-      <div class="price-card-header">
-        <div class="price-tier">ENTERPRISE · 그룹사</div>
-        <div class="price-amount">별도<span>협의</span></div>
+      <div class="price-header">
+        <div class="p-tier">Enterprise</div>
+        <div class="p-amount">별도<span>협의</span></div>
       </div>
-      <div class="price-card-body">
+      <div class="price-body">
         <div class="price-item">L1/L2 무제한</div>
         <div class="price-item">전담 변호사 지정 (1~2인)</div>
         <div class="price-item">담당군 전체 + 신규 도메인 추가</div>
@@ -655,194 +873,195 @@ ul.checklist li::before{content:"—";color:#94A3B8;flex-shrink:0}
         <div class="price-item">월 2회 정기 법률 리포트</div>
         <div class="price-item">L3: 정가의 30% 할인</div>
         <div class="price-item">연간 계약 시 1개월 무료</div>
-        <p style="font-size:11px;color:#94A3B8;margin-top:12px">대형 저축은행 그룹사, 캐피탈 그룹, 여러 지점 통합 관리</p>
+        <p style="font-size:11.5px;color:var(--muted);margin-top:12px;padding-top:8px;border-top:1px solid var(--border);">대형 저축은행 그룹사, 캐피탈 그룹, 복수 지점 통합 관리</p>
       </div>
     </div>
   </div>
 
-  <h3>나. "건수" 정의 명확화</h3>
-  <div class="warn-box"><p><strong>반드시 계약 전 확정 필요:</strong> "건"의 정의가 불명확하면 운영 분쟁·공수 폭증 위험. 아래 기준을 계약서에 명시.</p></div>
-  <table>
-    <thead><tr><th>분류</th><th>정의</th><th>1건 산정 기준</th></tr></thead>
-    <tbody>
-      <tr><td>L2 1건</td><td>단일 계좌/담보물/사안에 대한 1회 질의-답변</td><td>동일 계좌번호 + 동일 질의 목적 = 1건. 후속 질문은 새 건으로 산정.</td></tr>
-      <tr><td>복합 질의</td><td>1건 질문에 2개 이상 법률 이슈 포함 시</td><td>주된 이슈 기준 1건. 부가 이슈 0.5건 추가 산정.</td></tr>
-      <tr><td>수정 요청</td><td>답변 후 동일 건 수정 요청</td><td>오류 수정: 무료. 사실관계 변경에 따른 재작성: 0.5건.</td></tr>
-      <tr><td>L3 착수</td><td>정식 산출물 요청</td><td>L2 건수 차감 없음. 별도 과금.</td></tr>
-    </tbody>
-  </table>
+  <h3>6.2 "건수" 정의 명확화</h3>
+  <div class="note caution">
+    <div class="note-label">계약 전 반드시 확정</div>
+    "건"의 정의가 불명확하면 운영 분쟁·공수 폭증 위험. 아래 기준을 계약서에 명시한다.
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>분류</th><th>정의</th><th>1건 산정 기준</th></tr></thead>
+      <tbody>
+        <tr><td>L2 1건</td><td>단일 계좌/담보물/사안에 대한 1회 질의-답변</td><td>동일 계좌번호 + 동일 질의 목적 = 1건. 후속 질문은 신규 건.</td></tr>
+        <tr><td>복합 질의</td><td>1건 질문에 2개 이상 법률 이슈 포함 시</td><td>주된 이슈 기준 1건. 부가 이슈 0.5건 추가 산정.</td></tr>
+        <tr><td>수정 요청</td><td>답변 후 동일 건 수정 요청</td><td>오류 수정: 무료. 사실관계 변경에 따른 재작성: 0.5건.</td></tr>
+        <tr><td>L3 착수</td><td>정식 산출물 요청</td><td>L2 건수 차감 없음. 별도 과금.</td></tr>
+      </tbody>
+    </table>
+  </div>
 
-  <h3>다. 자문료 → 사건 착수금 크레딧 전환 (Up-sell 구조)</h3>
-  <table>
-    <thead><tr><th>조건</th><th>내용</th></tr></thead>
-    <tbody>
-      <tr><td>크레딧 발생 조건</td><td>동일 사안에서 자문(L2) 3회 이상 진행 후 정식 소송/경매 수임 시</td></tr>
-      <tr><td>크레딧 금액</td><td>자문 기간 구독료의 20% → 착수금에서 차감 (최대 50만원)</td></tr>
-      <tr><td>무임승차 방지</td><td>크레딧 사용 후 6개월 이내 계약 유지 의무. 해지 시 크레딧 소멸.</td></tr>
-      <tr><td>적용 범위</td><td>황해 법무법인 직접 수임 건에만 적용. 타 로펌 선임 시 크레딧 소멸.</td></tr>
-    </tbody>
-  </table>
+  <h3>6.3 자문료 → 사건 착수금 크레딧 전환 (Up-sell)</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>조건</th><th>내용</th></tr></thead>
+      <tbody>
+        <tr><td>크레딧 발생 조건</td><td>동일 사안에서 자문(L2) 3회 이상 진행 후 정식 소송·경매 수임 시</td></tr>
+        <tr><td>크레딧 금액</td><td>자문 기간 구독료의 20% → 착수금에서 차감 (최대 50만원)</td></tr>
+        <tr><td>무임승차 방지</td><td>크레딧 사용 후 6개월 이내 계약 유지 의무. 해지 시 크레딧 소멸.</td></tr>
+        <tr><td>적용 범위</td><td>황해 법무법인 직접 수임 건에만 적용. 타 로펌 선임 시 크레딧 소멸.</td></tr>
+      </tbody>
+    </table>
+  </div>
 
-  <h3>라. 수익 시뮬레이션</h3>
-  <table>
-    <thead><tr><th>시나리오</th><th>고객 수</th><th>평균 구독료</th><th>월 구독 수익</th><th>L3 추가 수익/월</th><th>총 월 수익</th></tr></thead>
-    <tbody>
-      <tr><td>파일럿 (3개월)</td><td>3개사</td><td>75만원</td><td>225만원</td><td>150만원</td><td>375만원</td></tr>
-      <tr><td>6개월</td><td>8개사</td><td>85만원</td><td>680만원</td><td>400만원</td><td>1,080만원</td></tr>
-      <tr><td>12개월</td><td>20개사</td><td>90만원</td><td>1,800만원</td><td>1,000만원</td><td>2,800만원</td></tr>
-      <tr><td>24개월 (2+3차 포함)</td><td>50개사</td><td>95만원</td><td>4,750만원</td><td>2,500만원</td><td>7,250만원</td></tr>
-    </tbody>
-  </table>
-</div>
+  <h3>6.4 수익 시뮬레이션</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>시나리오</th><th>고객 수</th><th>평균 구독료</th><th>월 구독 수익</th><th>L3 추가 수익</th><th>총 월 수익</th></tr></thead>
+      <tbody>
+        <tr><td>파일럿 (3개월)</td><td>3개사</td><td>75만원</td><td>225만원</td><td>150만원</td><td>375만원</td></tr>
+        <tr><td>6개월</td><td>8개사</td><td>85만원</td><td>680만원</td><td>400만원</td><td>1,080만원</td></tr>
+        <tr><td>12개월</td><td>20개사</td><td>90만원</td><td>1,800만원</td><td>1,000만원</td><td>2,800만원</td></tr>
+        <tr><td>24개월 (2+3차 포함)</td><td>50개사</td><td>95만원</td><td>4,750만원</td><td>2,500만원</td><td>7,250만원</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-<!-- ══ 07 리스크·로드맵 ══ -->
-<div class="section">
-  <div class="section-header">
-    <div class="section-num">07</div>
-    <div>
-      <div class="section-title">리스크 관리 및 실행 로드맵</div>
-      <div class="section-desc">주요 리스크 및 해결 방안, 6개월 파일럿 → 24개월 확장 로드맵</div>
+<!-- ══ 07 리스크 · 로드맵 ══ -->
+<section>
+  <div class="sec-head">
+    <div class="sec-num-block">07</div>
+    <h2>리스크 관리 및 실행 로드맵</h2>
+  </div>
+
+  <h3>7.1 주요 리스크 및 해결 방안</h3>
+  <div class="table-wrap td-wrap">
+    <table>
+      <thead><tr><th>#</th><th>리스크</th><th>해결 방안</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>R1</td>
+          <td><strong>초기 레퍼런스 부족 → 변호사 공수 폭증</strong><br>도메인 특화 인덱스 없이 매 질문 신규 리서치 필요</td>
+          <td>초기 3개월 파일럿 질의 전부 L2 처리 + 인덱스 직접 구축. 변호사 2인 집중 배정. 50건 이상 축적 후 L1 가동.</td>
+        </tr>
+        <tr>
+          <td>R2</td>
+          <td><strong>건수 정의 분쟁</strong><br>한도 초과 시 고객 불만 → 계약 해지</td>
+          <td>계약서에 건 정의 명시(6.2 기준). 초과 예상 시 사전 안내 + 인보이스 동의.</td>
+        </tr>
+        <tr>
+          <td>R3</td>
+          <td><strong>L1 오답 리스크</strong><br>인덱스 답변 오류로 금융기관 손해 발생</td>
+          <td>L1 답변에 "법률적 검토가 필요한 사안은 L2 요청 권고" 면책 문구 삽입. 변호사 5% 샘플 점검.</td>
+        </tr>
+        <tr>
+          <td>R4</td>
+          <td><strong>도메인 확장 시 분류 체계 흔들림</strong><br>업종마다 규제·계약·관행이 달라 라우팅 오류</td>
+          <td>신규 도메인 추가 전 최소 20건 수동 처리 → 분류 체계 검증 후 자동화.</td>
+        </tr>
+        <tr>
+          <td>R5</td>
+          <td><strong>핵심 변호사 이탈</strong><br>담당 변호사 퇴직 시 레퍼런스 소멸</td>
+          <td>모든 Q&A 플랫폼 저장 의무화 + 구두 자문 금지. 레퍼런스 = 로펌 자산 구조 강제.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>7.2 실행 로드맵</h3>
+  <div class="roadmap">
+    <div class="rm-item">
+      <div class="rm-phase">Phase 1 · 0~3개월</div>
+      <h4>파일럿 구축 및 첫 계약</h4>
+      <div class="card-grid2">
+        <div class="card">
+          <div class="card-title">기술</div>
+          <ul>
+            <li>RAG 데이터 교체 (금융법 6종 파싱·임베딩)</li>
+            <li>질문 입력 폼 재설계</li>
+            <li>담당군 라우팅 4개 그룹 설정</li>
+            <li>L1 인덱스 30~50건 초기 구축</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-title">영업·운영</div>
+          <ul>
+            <li>기존 등기팀 거래 저축은행 1~2개사 파일럿 제안</li>
+            <li>3개월 무료 파일럿 → 유료 전환 조건 명시</li>
+            <li>모든 질의 L2 처리 → 레퍼런스 50건 이상 축적</li>
+            <li>파일럿 완료 후 성과 자료화</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="rm-item">
+      <div class="rm-phase">Phase 2 · 3~9개월</div>
+      <h4>L1 자동화 가동 및 고객 확장</h4>
+      <div class="card-grid2">
+        <div class="card">
+          <div class="card-title">기술</div>
+          <ul>
+            <li>L1 자동화 가동 (목표: 전체 질의의 40%)</li>
+            <li>화이트라벨 고객 포털 (기관별 로고·색상)</li>
+            <li>월 정기 법률 리포트 자동 생성</li>
+            <li>규제 변경 자동 알림 (금융위·금감원 공고 RSS)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-title">영업·운영</div>
+          <ul>
+            <li>저축은행·새마을금고 5~10개사 Standard 계약 목표</li>
+            <li>파일럿 고객 추천 프로그램 운영</li>
+            <li>월 구독 수익 500만원 이상 달성</li>
+            <li>2차 타깃(상가연합회) 파일럿 1개 착수</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="rm-item">
+      <div class="rm-phase">Phase 3 · 9~24개월</div>
+      <h4>플랫폼 안정화 및 타깃 확장</h4>
+      <div class="card-grid2">
+        <div class="card">
+          <div class="card-title">기술</div>
+          <ul>
+            <li>L1 자동화율 60% 이상 달성</li>
+            <li>Enterprise 전담 변호사 배정 시스템</li>
+            <li>2차 도메인(상가·프랜차이즈) RAG 추가</li>
+            <li>API 연동 — 고객사 내부 시스템 연결</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-title">영업·운영</div>
+          <ul>
+            <li>고객 20개사 이상 / 월 수익 2,000만원 목표</li>
+            <li>새마을금고 중앙회 연계 — 지점 일괄 계약 추진</li>
+            <li>3차(중소기업) 시장 진입 검토</li>
+            <li>타 로펌 라이선스 판매 검토</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 
-  <h3>가. 주요 리스크 및 해결 방안</h3>
-  <table>
-    <thead><tr><th>#</th><th>리스크</th><th>해결 방안</th></tr></thead>
-    <tbody>
-      <tr class="risk-row">
-        <td class="risk-num">R1</td>
-        <td><strong>초기 레퍼런스 부족 → 변호사 공수 폭증</strong><br><small>도메인 특화 인덱스 없이 매 질문 신규 리서치 필요</small></td>
-        <td>초기 3개월: 파일럿 고객 질의 전부 L2 처리 + 인덱스 직접 구축. 변호사 2인 집중 배정. 50건 이상 축적 후 L1 가동.</td>
-      </tr>
-      <tr class="risk-row">
-        <td class="risk-num">R2</td>
-        <td><strong>건수 정의 분쟁</strong><br><small>"20건" 한도 초과 시 고객 불만 → 계약 해지</small></td>
-        <td>계약서에 건 정의 명시(본 기획서 6-나 기준). 초과 예상 시 사전 안내 + 인보이스 동의 받기.</td>
-      </tr>
-      <tr class="risk-row">
-        <td class="risk-num">R3</td>
-        <td><strong>L1 오답 리스크</strong><br><small>인덱스 기반 답변이 잘못되어 금융기관 손해 발생</small></td>
-        <td>L1 답변에 "법률적 검토가 필요한 사안은 L2 요청 권고" 면책 문구 삽입. 리스크 신호 감지 시 자동 L2 유도. 변호사 5% 샘플 점검.</td>
-      </tr>
-      <tr class="risk-row">
-        <td class="risk-num">R4</td>
-        <td><strong>도메인 확장 시 질문 분류 체계 흔들림</strong><br><small>업종마다 규제·계약·관행이 달라 라우팅 오류</small></td>
-        <td>신규 도메인 추가 전 최소 20건의 파일럿 질의 수동 처리 → 분류 체계 검증 후 자동화.</td>
-      </tr>
-      <tr class="risk-row">
-        <td class="risk-num">R5</td>
-        <td><strong>핵심 변호사 이탈</strong><br><small>담당군 변호사 퇴직 시 레퍼런스 소멸</small></td>
-        <td>모든 Q&A 플랫폼에 저장 의무화 + 구두 자문 금지. 레퍼런스 = 로펌 자산이 되는 구조 강제.</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h3>나. 실행 로드맵</h3>
-
-  <div class="roadmap-phase">
-    <div class="roadmap-phase-header">
-      <div class="phase-badge">PHASE 1</div>
-      <div class="phase-title">파일럿 구축 및 첫 계약</div>
-      <div class="phase-period">0 ~ 3개월</div>
-    </div>
-    <div class="grid2">
-      <div>
-        <h4>기술</h4>
-        <ul class="checklist">
-          <li>RAG 데이터 교체 (금융법 6종 파싱·임베딩)</li>
-          <li>질문 입력 폼 재설계</li>
-          <li>담당군 라우팅 4개 그룹 설정</li>
-          <li>L1 인덱스 30~50건 초기 구축</li>
-        </ul>
-      </div>
-      <div>
-        <h4>영업·운영</h4>
-        <ul class="checklist">
-          <li>기존 등기팀 거래 저축은행 1~2개사 파일럿 제안</li>
-          <li>3개월 무료 파일럿 → 유료 전환 조건 명시</li>
-          <li>모든 질의 L2 처리 → 레퍼런스 50건 이상 축적</li>
-          <li>파일럿 완료 후 레퍼런스·성과 정리 → 제안서 자료화</li>
-        </ul>
-      </div>
-    </div>
+  <h3>7.3 핵심 성과 지표 (KPI)</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>지표</th><th>3개월</th><th>6개월</th><th>12개월</th><th>24개월</th></tr></thead>
+      <tbody>
+        <tr><td>구독 고객 수</td><td>3개사</td><td>8개사</td><td>20개사</td><td>50개사</td></tr>
+        <tr><td>월 구독 수익</td><td>225만원</td><td>680만원</td><td>1,800만원</td><td>4,750만원</td></tr>
+        <tr><td>L1 자동화율</td><td>20%</td><td>40%</td><td>55%</td><td>70%</td></tr>
+        <tr><td>Q&A 인덱스 축적</td><td>50건</td><td>200건</td><td>500건</td><td>1,500건</td></tr>
+        <tr><td>L2 평균 처리 공수</td><td>2.5시간</td><td>1.5시간</td><td>0.8시간</td><td>0.4시간</td></tr>
+        <tr><td>고객 유지율</td><td>—</td><td>90%+</td><td>85%+</td><td>85%+</td></tr>
+      </tbody>
+    </table>
   </div>
 
-  <div class="roadmap-phase">
-    <div class="roadmap-phase-header">
-      <div class="phase-badge">PHASE 2</div>
-      <div class="phase-title">L1 자동화 가동 및 고객 확장</div>
-      <div class="phase-period">3 ~ 9개월</div>
-    </div>
-    <div class="grid2">
-      <div>
-        <h4>기술</h4>
-        <ul class="checklist">
-          <li>L1 자동화 가동 (목표: 전체 질의의 40% 처리)</li>
-          <li>화이트라벨 고객 포털 구축 (기관별 로고·색상)</li>
-          <li>월 정기 법률 리포트 자동 생성 기능</li>
-          <li>자동 규제 변경 알림 (금융위·금감원 공고 RSS)</li>
-        </ul>
-      </div>
-      <div>
-        <h4>영업·운영</h4>
-        <ul class="checklist">
-          <li>저축은행·새마을금고 5~10개사 STANDARD 계약 목표</li>
-          <li>파일럿 고객 추천 프로그램 운영</li>
-          <li>월 구독 수익 500만원 이상 달성</li>
-          <li>2차 타깃(상가연합회·프랜차이즈) 파일럿 1개 착수</li>
-        </ul>
-      </div>
-    </div>
+  <div class="note">
+    <div class="note-label">요약</div>
+    뱅크법률집사는 아파트집사의 기술 자산을 재활용하여 최소 개발 비용으로 금융권 B2B 구독 수익을 창출하는 구조다. 초기 3개월 파일럿에서 레퍼런스를 빠르게 축적하여 L1 자동화율을 높이는 것이 수익성의 핵심이다. 변호사 공수는 레퍼런스가 쌓일수록 자동으로 줄어드는 선순환 구조를 가지며, 1차 목표는 월 100만원 Standard 고객 10개사 달성 → 월 1,000만원 안정 구독 수익이다.
   </div>
+</section>
 
-  <div class="roadmap-phase">
-    <div class="roadmap-phase-header">
-      <div class="phase-badge">PHASE 3</div>
-      <div class="phase-title">플랫폼 안정화 및 타깃 확장</div>
-      <div class="phase-period">9 ~ 24개월</div>
-    </div>
-    <div class="grid2">
-      <div>
-        <h4>기술</h4>
-        <ul class="checklist">
-          <li>L1 자동화율 60% 이상 달성</li>
-          <li>ENTERPRISE 전담 변호사 배정 시스템</li>
-          <li>2차 도메인(상가·프랜차이즈) RAG 추가</li>
-          <li>API 연동 — 고객사 내부 시스템 연결</li>
-        </ul>
-      </div>
-      <div>
-        <h4>영업·운영</h4>
-        <ul class="checklist">
-          <li>고객 20개사 이상 / 월 수익 2,000만원 목표</li>
-          <li>새마을금고 중앙회 연계 — 지점 일괄 계약 추진</li>
-          <li>3차(중소기업) 시장 진입 검토</li>
-          <li>플랫폼 외부 판매(타 로펌에 라이선스) 검토</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+<p style="font-size:11px;color:var(--muted);text-align:center;margin-top:40px;">법무법인 더 에이치 황해 · 내부 기획서 v1.0 · 2026년 3월 · 무단 배포 금지</p>
 
-  <h3>다. 핵심 성과 지표 (KPI)</h3>
-  <table>
-    <thead><tr><th>지표</th><th>3개월</th><th>6개월</th><th>12개월</th><th>24개월</th></tr></thead>
-    <tbody>
-      <tr><td>구독 고객 수</td><td>3개사</td><td>8개사</td><td>20개사</td><td>50개사</td></tr>
-      <tr><td>월 구독 수익</td><td>225만원</td><td>680만원</td><td>1,800만원</td><td>4,750만원</td></tr>
-      <tr><td>L1 자동화율</td><td>20%</td><td>40%</td><td>55%</td><td>70%</td></tr>
-      <tr><td>Q&A 인덱스 축적</td><td>50건</td><td>200건</td><td>500건</td><td>1,500건</td></tr>
-      <tr><td>L2 평균 처리 공수</td><td>2.5시간</td><td>1.5시간</td><td>0.8시간</td><td>0.4시간</td></tr>
-      <tr><td>고객 유지율</td><td>—</td><td>90%+</td><td>85%+</td><td>85%+</td></tr>
-    </tbody>
-  </table>
-
-  <div class="divider"></div>
-  <div class="highlight-box">
-    <p><strong>요약:</strong> 뱅크법률집사는 아파트집사의 기술 자산을 재활용하여 최소 개발 비용으로 금융권 B2B 구독 수익을 창출하는 구조다. 초기 3개월 파일럿에서 레퍼런스를 빠르게 축적하여 L1 자동화율을 높이는 것이 수익성의 핵심이며, 변호사 공수는 레퍼런스가 쌓일수록 자동으로 줄어드는 선순환 구조를 가진다. 1차 목표는 월 100만원 STANDARD 고객 10개사 → 월 1,000만원 안정 구독 수익 달성이다.</p>
-  </div>
-
-  <p style="font-size:11px;color:#94A3B8;text-align:center;margin-top:32px">법무법인 더 에이치 황해 · 내부 기획서 v1.0 · 2026년 3월 · 무단 배포 금지</p>
-</div>
-
+</div><!-- /.body-wrap -->
 </body>
 </html>
